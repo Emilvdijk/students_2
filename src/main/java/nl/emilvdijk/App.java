@@ -5,353 +5,68 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-class findingDeleter {
+
+class Students2 {
 
   /**
-   * finds target in arraylist of string arrays and  ends its existence also prints succes or
-   * failure
+   * school database system where mentors, students and classes can be added and removed and mentors
+   * and students can be added and removed from classes
    *
-   * @param arrayTarget ArrayList<String[]> to search through
-   * @param targetName  String what to search for
-   * @return ArrayList<String [ ]> return altered list
+   * @param args not used
    */
-  ArrayList<String[]> searchAndDestroy(ArrayList<String[]> arrayTarget, String targetName) {
-    boolean found = false;
-    for (int i = 0; i < arrayTarget.size(); i++) {
-      String[] arrayToSearch = arrayTarget.get(i);
-      if (Objects.equals(arrayToSearch[0], targetName)) {
-        arrayTarget.remove(i);
-        found = true;
-      }
-    }
-    if (found) {
-      System.out.println("verwijderen gelukt!");
-    } else {
-      System.out.println("niet gevonden, probeer het nog eens.");
-    }
-    return arrayTarget;
-  }
-}
-
-class printing {
-
-  /**
-   * takes ArrayList<String[]> in params and prints it out neatly
-   *
-   * @param arrayListToPrint ArrayList<String[]> to print out
-   */
-  static void arrayPrinter(ArrayList<String[]> arrayListToPrint) {
-    for (int i = 0; i < arrayListToPrint.size(); i++) {
-      String[] arrayToPrint = arrayListToPrint.get(i);
-      for (int y = 0; y < arrayToPrint.length; y++) {
-        System.out.print(arrayToPrint[y]);
-        if (y != arrayToPrint.length - 1) {
-          System.out.print(", ");
-        }
-      }
-      System.out.println();
-    }
-    System.out.println();
-  }
-
-}
-
-class StudentOld {
-
-  ArrayList<String[]> StudentChoices(ArrayList<String[]> studentArrayList) {
-    Scanner myScanner = new Scanner(System.in);
-    String ch;
-    do {
-      do {
-        System.out.println("""
-            Opties voor studenten:
-            1 om een student toe te voegen.
-            2 om een student te verwijderen.
-            3 om alle studenten te tonen.
-            q om terug te gaan naar het menu.""");
-        ch = myScanner.nextLine();
-      } while ((ch == "1") | (ch == "2") | (ch == "3") & (ch != "q"));
-
-      switch (ch) {
-        case "1":
-
-          System.out.println("Vul de naam van de nieuwe student in of \"q\" om te annuleren: \n");
-          String studentName = myScanner.nextLine();
-          if (Objects.equals(studentName, "q")) {
-            break;
-          }
-
-          System.out.println("Vul de leeftijd van de nieuwe student in: \n");
-
-          while (!myScanner.hasNextInt()) {
-            System.out.println("vul een cijfer in voor leeftijd!");
-            myScanner.next();
-          }
-          String studentAge = String.valueOf(myScanner.nextInt());
-          myScanner.skip("\n");
-          System.out.println("Vul het telefoonnummer van de nieuwe student in: \n");
-
-          while (!myScanner.hasNextInt()) {
-            System.out.println("vul een geldig telefoonnummer in!");
-            myScanner.next();
-          }
-          String studentPhone = String.valueOf(myScanner.nextInt());
-          myScanner.skip("\n");
-
-          System.out.println("Vul het e-mail adress in van de nieuwe student: \n");
-          String studentEmail = myScanner.nextLine();
-
-          System.out.println("Vul het adress van de nieuwe student in: \n");
-          String studentAdress = myScanner.nextLine();
-
-          System.out.println("Vul de woonplaats van de nieuwe student in: \n");
-          String studentPlace = myScanner.nextLine();
-
-          System.out.println("Vul het studentnummer van de nieuwe student in: \n");
-          while (!myScanner.hasNextInt()) {
-            System.out.println("vul een geldig studentnummer in!");
-            myScanner.next();
-          }
-          String studentNumber = String.valueOf(myScanner.nextInt());
-          myScanner.skip("\n");
-
-          String[] newStudent = {studentName, studentAge, studentPhone, studentEmail, studentAdress,
-              studentPlace, studentNumber};
-          studentArrayList.add(newStudent);
-          break;
-
-        case "2":
-          System.out.println(
-              "Vul de naam van de te vervijderen student in of q om te annuleren: \n");
-          String studentDelete = myScanner.nextLine();
-          if (Objects.equals(studentDelete, "q")) {
-            break;
-          }
-          new findingDeleter().searchAndDestroy(studentArrayList, studentDelete);
-          break;
-        case "3":
-          System.out.println(
-              "naam, leeftijd, telefoonnummer, e-mail, adress, plaats, studentnummer");
-          new printing().arrayPrinter(studentArrayList);
-          break;
-
-      }
-
-    } while (!ch.equals("q"));
-    System.out.println();
-    return studentArrayList;
-  }
-}
-
-class Mentor {
-
-  Mentor(ArrayList<String[]> mentorArrayList) {
-    Scanner myScanner = new Scanner(System.in);
-    String ch;
-    do {
-      do {
-        System.out.println("""
-            Opties voor mentoren:
-            1 om een mentor toe te voegen.
-            2 om een mentor te verwijderen.
-            3 om alle mentoren te tonen.
-            q om terug te gaan naar het menu.""");
-        ch = myScanner.nextLine();
-      } while ((ch == "1") | (ch == "2") | (ch == "3") & (ch != "q"));
-
-      switch (ch) {
-        case "1":
-
-          System.out.println("Vul de naam van de nieuwe mentor in of \"q\" om te annuleren: \n");
-          String mentorName = myScanner.nextLine();
-          if (Objects.equals(mentorName, "q")) {
-            break;
-          }
-
-          System.out.println("Vul de leeftijd van de mentor student in: \n");
-
-          while (!myScanner.hasNextInt()) {
-            System.out.println("vul een cijfer in voor leeftijd!");
-            myScanner.next();
-          }
-          String mentorAge = String.valueOf(myScanner.nextInt());
-          myScanner.skip("\n");
-          System.out.println("Vul het telefoonnummer van de nieuwe mentor in: \n");
-
-          while (!myScanner.hasNextInt()) {
-            System.out.println("vul een geldig telefoonnummer in!");
-            myScanner.next();
-          }
-          String mentorPhone = String.valueOf(myScanner.nextInt());
-          myScanner.skip("\n");
-
-          System.out.println("Vul het e-mail adress van de nieuwe mentor in: \n");
-          String mentorEmail = myScanner.nextLine();
-
-          System.out.println("Vul het adress van de nieuwe mentor in: \n");
-          String mentorAdress = myScanner.nextLine();
-
-          System.out.println("Vul de woonplaats van de nieuwe mentor in: \n");
-          String mentorPlace = myScanner.nextLine();
-
-          System.out.println("Vul het werknemernummer van de nieuwe mentor in: \n");
-          while (!myScanner.hasNextInt()) {
-            System.out.println("vul een geldig werknemernummer in!");
-            myScanner.next();
-          }
-          String mentorNumber = String.valueOf(myScanner.nextInt());
-          myScanner.skip("\n");
-
-          String[] newMentor = {mentorName, mentorAge, mentorPhone, mentorEmail, mentorAdress,
-              mentorPlace, mentorNumber};
-          mentorArrayList.add(newMentor);
-          break;
-
-        case "2":
-          System.out.println(
-              "Vul de naam van de te vervijderen mentor in of q om te annuleren: \n");
-          String mentorDelete = myScanner.nextLine();
-          if (Objects.equals(mentorDelete, "q")) {
-            break;
-          }
-          new findingDeleter().searchAndDestroy(mentorArrayList, mentorDelete);
-          break;
-        case "3":
-          System.out.println(
-              "naam, leeftijd, telefoonnummer, e-mail, adress, plaats, werknemernummer");
-          new printing().arrayPrinter(mentorArrayList);
-          break;
-
-      }
-
-    } while (!ch.equals("q"));
-  }
-}
-
-class Klas {
-
-  Klas(ArrayList<String[]> classesArrayList) {
-    System.out.println("klas");
-    Scanner myScanner = new Scanner(System.in);
-    String ch;
-    do {
-      do {
-        System.out.println("""
-            Opties voor klassen:
-            1 om een klas toe te voegen.
-            2 om een klas te verwijderen.
-            3 om alle klassen te tonen.
-            q om terug te gaan naar het menu.""");
-        ch = myScanner.nextLine();
-      } while ((ch == "1") | (ch == "2") | (ch == "3") & (ch != "q"));
-
-      switch (ch) {
-        case "1":
-
-          break;
-
-        case "2":
-
-          break;
-
-        case "3":
-          System.out.println(
-              "vaknaam, mentor, leerlingen");
-          new printing().arrayPrinter(classesArrayList);
-          break;
-      }
-    } while (!ch.equals("q"));
-  }
-}
-
-class examples {
-  /**
-   * takes ArrayList<String[]> and fills it with example students
-   *
-   * @return ArrayList<String [ ]> new list with examples old contents will be gone
-   */
-  static ArrayList<String[]> addSampleStudents() {
-    System.out.println("Er zijn voorbeeld studenten toegevoegd.");
-    ArrayList<String[]> studentsArray = new ArrayList<>();
-    String[] eric = {"Eric", "12", "346575764", "nice@nice.com", "Nicestraat", "Nicestad", "34"};
-    String[] jantje = {"Jantje", "5", "23452345", "nice3@nice3.com", "Nicewijk", "Niceplek", "36"};
-    String[] evelien = {"Evelien", "34", "23452345", "nice2@nice2.com", "Niceweg", "Nicedorp",
-        "35"};
-    studentsArray.add(eric);
-    studentsArray.add(evelien);
-    studentsArray.add(jantje);
-    return studentsArray;
-  }
-
-  /**
-   * takes ArrayList<String[]> and fills it with example mentors
-   *
-   * @return ArrayList<String [ ]> new list with examples old contents will be gone
-   */
-  static ArrayList<String[]> addSampleMentors() {
-    System.out.println("Er zijn voorbeeld mentoren toegevoegd.");
-    ArrayList<String[]> studentsArray = new ArrayList<>();
-    String[] daan = {"Daan", "55", "2345234532", "nice@school.com", "Schoolstraat", "Schoolstad",
-        "55"};
-    String[] david = {"David", "57", "56785867", "nice2@school2.com", "Schoolweg", "Schooldorp",
-        "56"};
-    String[] simone = {"Simone", "99", "96964623", "nice3@school3.com", "Schoolwijk", "Schoolplek",
-        "57"};
-    Student ewoud = new Student("Ewoud",23,"533533234","nice@nice.nl","straatofzo 3","plaatsofzo", 6534);
-    studentsArray.add(daan);
-    studentsArray.add(david);
-    studentsArray.add(simone);
-    return studentsArray;
-  }
-
-  /**
-   * takes ArrayList<String[]> and fills it with 3 example classes
-   *
-   * @return ArrayList<String [ ]> new list with examples old contents will be gone
-   */
-  static ArrayList<String[]> addSampleClasses() {
-    System.out.println("Er zijn voorbeeld klassen toegevoegd.");
-    ArrayList<String[]> classesArray = new ArrayList<>();
-    String[] class1 = {"Java", "Daan", "Eric", "Evelien"};
-    String[] class2 = {"Python", "David", "Evelien", "Jantje"};
-    String[] class3 = {"HTML", "Simone", "Eric", "Jantje"};
-    classesArray.add(class1);
-    classesArray.add(class2);
-    classesArray.add(class3);
-    return classesArray;
-  }
-
-
-}
-
-class students2 {
-
-
   public static void main(String[] args) {
     String ch;
     Scanner myScanner = new Scanner(System.in);
-    Student eric = new Student("Naampje", 13, "434536345344","nice@nice.nl", "straatnaam 2", "Dingetje stad", 234523);
-    System.out.printf("naam: %-14s  leeftijd: %-7s  telefoonnr: %-15s e-mail: %-16s adres: %-16s woonplaats: %-16s studentnummer: %-16s ", eric.Name, eric.age, eric.telephoneNumber,eric.email, eric.adress, eric.place, eric.StudentNumber);
-    System.out.println();
-    ArrayList<String[]> studentsArray;
-    studentsArray = examples.addSampleStudents();
-//    students2.arrayPrinter(studentsArray);
+    ArrayList<Student> studentsList = new ArrayList();
+    ArrayList<Mentor> mentorsList = new ArrayList();
+    ArrayList<Classes> classesList = new ArrayList();
 
-    ArrayList<String[]> mentorsArray;
-    mentorsArray = examples.addSampleMentors();
-//    students2.arrayPrinter(mentorsArray);
 
-    ArrayList<String[]> classesArray;
-    classesArray = examples.addSampleClasses();
-//    students2.arrayPrinter(classesArray);
+    // 3 examples added for students mentors and classes and notify they have been added
+    Student eric = new Student("Eric", 12, "346575764", "nice@nice.com", "Nicestraat 1", "Nicestad",
+        34);
+    Student jantje = new Student("Jantje", 5, "23452345", "nice3@nice3.com", "Nicewijk 2",
+        "Niceplek", 36);
+    Student evelien = new Student("Evelien", 34, "23452345", "nice2@nice2.com", "Niceweg 3",
+        "Nicedorp", 35);
+    studentsList.add(eric);
+    studentsList.add(jantje);
+    studentsList.add(evelien);
+    Mentor daan = new Mentor("Daan", 55, "2345234532", "nice@school.com", "Schoolstraat",
+        "Schoolstad", 55);
+    Mentor david = new Mentor("David", 57, "56785867", "nice2@school2.com", "Schoolweg",
+        "Schooldorp", 56);
+    Mentor simone = new Mentor("Simone", 99, "96964623", "nice3@school3.com", "Schoolwijk",
+        "Schoolplek", 57);
+    mentorsList.add(daan);
+    mentorsList.add(david);
+    mentorsList.add(simone);
+    ArrayList<Student> javaStudentList = new ArrayList<>();
+    ArrayList<Mentor> javaMentorList = new ArrayList<>();
+    javaMentorList.add(daan);
+    javaStudentList.add(jantje);
+    javaStudentList.add(evelien);
+    ArrayList<Student> pythonStudentList = new ArrayList<>();
+    ArrayList<Mentor> pythonMentorList = new ArrayList<>();
+    pythonMentorList.add(daan);
+    pythonStudentList.add(eric);
+    pythonStudentList.add(evelien);
+    ArrayList<Student> htmlStudentList = new ArrayList<>();
+    ArrayList<Mentor> htmlMentorList = new ArrayList<>();
+    htmlMentorList.add(simone);
+    htmlStudentList.add(eric);
+    htmlStudentList.add(jantje);
+    Classes java = new Classes("Java", javaMentorList, javaStudentList);
+    Classes python = new Classes("Python", pythonMentorList, pythonStudentList);
+    Classes html = new Classes("HTML", htmlMentorList, htmlStudentList);
+    classesList.add(java);
+    classesList.add(python);
+    classesList.add(html);
+    System.out.println("er zijn voorbeelden toevevoegd.");
+    // end of example adding code
 
-//    System.out.println(Arrays.toString(studentsArray.get(0)));
-//    String[] x = studentsArray.get(0);
-//    System.out.println(Arrays.toString(x));
-//    System.out.println(studentsArray.size());
-//    System.out.println(studentsArray.get(0).length);
 
-    System.out.println();
+    // main menu of the system where inputs are asked
     do {
       do {
         System.out.println("""
@@ -359,24 +74,349 @@ class students2 {
             1 voor studenten.
             2 voor mentoren.
             3 voor klassen.
-            q om het programma af te sluiten.""");
+            'quit' om het programma af te sluiten.""");
         ch = myScanner.nextLine();
-      } while ((ch == "1") | (ch == "2") | (ch == "3") & (ch != "q"));
+      } while ((ch == "1") | (ch == "2") | (ch == "3") & (ch != "quit"));
 
+
+      // choices for adding removing or showing of students
       switch (ch) {
         case "1":
-          new StudentOld().StudentChoices(studentsArray);
+          do {
+            do {
+              System.out.println("""
+                  Opties voor studenten:
+                  1 om een student toe te voegen.
+                  2 om een student te verwijderen.
+                  3 om alle studenten te tonen.
+                  q om terug te gaan naar het menu.""");
+              ch = myScanner.nextLine();
+            } while ((ch == "1") | (ch == "2") | (ch == "3") & (ch != "q"));
+
+            switch (ch) {
+              case "1":
+                // ask input and makes student object and adds student to list
+
+                System.out.println(
+                    "Vul de naam van de nieuwe student in of \"q\" om te annuleren: \n");
+                String studentName = myScanner.nextLine();
+                if (Objects.equals(studentName, "q")) {
+                  break;
+                }
+
+                System.out.println("Vul de leeftijd van de nieuwe student in: \n");
+
+                while (!myScanner.hasNextInt()) {
+                  System.out.println("vul een cijfer in voor leeftijd!");
+                  myScanner.next();
+                }
+                int studentAge = myScanner.nextInt();
+                myScanner.skip("\n");
+                System.out.println("Vul het telefoonnummer van de nieuwe student in: \n");
+
+                while (!myScanner.hasNextInt()) {
+                  System.out.println("vul een geldig telefoonnummer in!");
+                  myScanner.next();
+                }
+                String studentPhone = String.valueOf(myScanner.nextInt());
+                myScanner.skip("\n");
+
+                System.out.println("Vul het e-mail adress in van de nieuwe student: \n");
+                String studentEmail = myScanner.nextLine();
+
+                System.out.println("Vul het adress van de nieuwe student in: \n");
+                String studentAdress = myScanner.nextLine();
+
+                System.out.println("Vul de woonplaats van de nieuwe student in: \n");
+                String studentPlace = myScanner.nextLine();
+
+                System.out.println("Vul het studentnummer van de nieuwe student in: \n");
+                while (!myScanner.hasNextInt()) {
+                  System.out.println("vul een geldig studentnummer in!");
+                  myScanner.next();
+                }
+                int studentNumber = myScanner.nextInt();
+                myScanner.skip("\n");
+
+                Student newStudent = new Student(studentName, studentAge, studentPhone,
+                    studentEmail, studentAdress,
+                    studentPlace, studentNumber);
+                studentsList.add(newStudent);
+                break;
+
+              // ask for input and removes student
+                case "2":
+                System.out.println(
+                    "Vul de naam van de te verwijderen student in of 'q' om te annuleren: \n");
+                String studentDelete = myScanner.nextLine();
+                if (Objects.equals(studentDelete, "q")) {
+                  break;
+                } else {
+                  Student.SearchAndDestroy(studentsList, studentDelete);
+                }
+                break;
+
+                // prints out all students
+              case "3":
+                for (int i = 0; i < studentsList.size(); i++) {
+                  studentsList.get(i).StudentPrinter();
+                }
+                System.out.println();
+                break;
+            }
+
+          } while (!ch.equals("q"));
 
           break;
 
-        case "2":
-          new Mentor(mentorsArray);
+
+
+        // choices for adding, removing or showing of mentors
+          case "2":
+          do {
+            do {
+              System.out.println("""
+                  Opties voor mentoren:
+                  1 om een mentor toe te voegen.
+                  2 om een mentor te verwijderen.
+                  3 om alle mentoren te tonen.
+                  q om terug te gaan naar het menu.""");
+              ch = myScanner.nextLine();
+            } while ((ch == "1") | (ch == "2") | (ch == "3") & (ch != "q"));
+
+            switch (ch) {
+
+              // ask for input and makes mentor object and adds it to list
+              case "1":
+                System.out.println(
+                    "Vul de naam van de nieuwe mentor in of \"q\" om te annuleren: \n");
+                String mentorName = myScanner.nextLine();
+                if (Objects.equals(mentorName, "q")) {
+                  break;
+                }
+
+                System.out.println("Vul de leeftijd van de mentor student in: \n");
+
+                while (!myScanner.hasNextInt()) {
+                  System.out.println("vul een cijfer in voor leeftijd!");
+                  myScanner.next();
+                }
+                int mentorAge = myScanner.nextInt();
+                myScanner.skip("\n");
+                System.out.println("Vul het telefoonnummer van de nieuwe mentor in: \n");
+
+                while (!myScanner.hasNextInt()) {
+                  System.out.println("vul een geldig telefoonnummer in!");
+                  myScanner.next();
+                }
+                String mentorPhone = String.valueOf(myScanner.nextInt());
+                myScanner.skip("\n");
+
+                System.out.println("Vul het e-mail adress van de nieuwe mentor in: \n");
+                String mentorEmail = myScanner.nextLine();
+
+                System.out.println("Vul het adress van de nieuwe mentor in: \n");
+                String mentorAdress = myScanner.nextLine();
+
+                System.out.println("Vul de woonplaats van de nieuwe mentor in: \n");
+                String mentorPlace = myScanner.nextLine();
+
+                System.out.println("Vul het werknemernummer van de nieuwe mentor in: \n");
+                while (!myScanner.hasNextInt()) {
+                  System.out.println("vul een geldig werknemernummer in!");
+                  myScanner.next();
+                }
+                int mentorNumber = myScanner.nextInt();
+                myScanner.skip("\n");
+
+                Mentor newMentor = new Mentor(mentorName, mentorAge, mentorPhone, mentorEmail,
+                    mentorAdress,
+                    mentorPlace, mentorNumber);
+                mentorsList.add(newMentor);
+                break;
+
+                // ask for input and removes mentor object
+              case "2":
+                System.out.println(
+                    "Vul de naam van de te vervijderen mentor in of q om te annuleren: \n");
+                String mentorDelete = myScanner.nextLine();
+                if (Objects.equals(mentorDelete, "q")) {
+                  break;
+                } else {
+                  Mentor.SearchAndDestroy(mentorsList, mentorDelete);
+                }
+                break;
+
+                // prints out all mentors and details
+              case "3":
+                for (int i = 0; i < mentorsList.size(); i++) {
+                  mentorsList.get(i).MentorPrinter();
+                }
+                System.out.println();
+                break;
+            }
+          } while (!ch.equals("q"));
           break;
 
-        case "3":
-          new Klas(classesArray);
+
+        // choices for classes like adding a class or changing its occupants
+          case "3":
+          do {
+            do {
+              System.out.println("""
+                  Opties voor klassen:
+                  1 om een klas toe te voegen.
+                  2 om een mentor toe te voegen aan een klas.
+                  3 om een student toe te voegen aan een klas.
+                  4 om een mentor te verwijderen uit een klas.
+                  5 om een student te verwijderen uit een klas.
+                  6 om een klas te verwijderen.
+                  7 om alle klassen weer te geven.
+                  q om terug te gaan naar het menu.""");
+              ch = myScanner.nextLine();
+            } while ((ch == "1") | (ch == "2") | (ch == "3") | (ch == "4") | (ch == "5") | (ch
+                == "6") | (ch == "7") & (ch != "q"));
+
+            switch (ch) {
+
+              // makes new class object
+              case "1":
+                System.out.println("naam van de klas:");
+                String newClassName = myScanner.nextLine();
+                Classes newClass = new Classes(newClassName, null, null);
+                classesList.add(newClass);
+                break;
+
+                // ask for input and adds mentor to class
+              case "2":
+                int y = 1;
+                System.out.println("aan welke klas wil je een mentor toevoegen:");
+                for (; y - 1 < classesList.size(); y++) {
+                  System.out.printf("%s  %s%n", y, classesList.get(y - 1).className);
+                }
+                int choice = 0;
+                do {
+                  choice = myScanner.nextInt();
+
+                } while (!(choice >= 1 && choice <= y - 1));
+                myScanner.skip("\n");
+                System.out.println("welke mentor wil je toevoegen?");
+                y = 1;
+                for (; y - 1 < mentorsList.size(); y++) {
+                  System.out.printf("%s  %s%n", y, mentorsList.get(y - 1).Name);
+                }
+                int choice2 = 0;
+                do {
+                  choice2 = myScanner.nextInt();
+                } while (!(choice2 >= 1 && choice2 <= y - 1));
+                myScanner.skip("\n");
+                classesList.get(choice - 1).AddClassMentor(mentorsList.get(choice2 - 1));
+                break;
+
+                // ask for input and adds student to class
+              case "3":
+                y = 1;
+                System.out.println("aan welke klas wil je een student toevoegen:");
+                for (; y - 1 < classesList.size(); y++) {
+                  System.out.printf("%s  %s%n", y, classesList.get(y - 1).className);
+                }
+                choice = 0;
+                do {
+                  choice = myScanner.nextInt();
+                } while (!(choice >= 1 && choice <= y - 1));
+                myScanner.skip("\n");
+                System.out.println("welke student wil je toevoegen?");
+                y = 1;
+                for (; y - 1 < studentsList.size(); y++) {
+                  System.out.printf("%s  %s%n", y, studentsList.get(y - 1).Name);
+                }
+                choice2 = 0;
+                do {
+                  choice2 = myScanner.nextInt();
+
+                } while (!(choice2 >= 1 && choice2 <= y - 1));
+                myScanner.skip("\n");
+                classesList.get(choice - 1).AddClassStudent(studentsList.get(choice2 - 1));
+                break;
+
+                // ask for unput and removes chosen mentor from class
+              case "4":
+                y = 1;
+                System.out.println("van welke klas wil je een mentor verwijderen:");
+                for (; y - 1 < classesList.size(); y++) {
+                  System.out.printf("%s  %s%n", y, classesList.get(y - 1).className);
+                }
+                choice = 0;
+                do {
+                  choice = myScanner.nextInt();
+                } while (!(choice >= 1 && choice <= y - 1));
+                myScanner.skip("\n");
+                System.out.println("welke mentor wil je verwijderen?");
+                y = 1;
+                for (; y - 1 < classesList.get(choice - 1).classMentors.size(); y++) {
+                  System.out.printf("%s  %s%n", y,
+                      classesList.get(choice - 1).classMentors.get(y - 1).Name);
+                }
+                choice2 = 0;
+                do {
+                  choice2 = myScanner.nextInt();
+                } while (!(choice2 >= 1 && choice2 <= y - 1));
+                myScanner.skip("\n");
+                classesList.get(choice - 1).RemoveClassMentor(mentorsList.get(choice2 - 1));
+                break;
+
+                // ask for input and removes chosen student from class
+              case "5":
+                y = 1;
+                System.out.println("van welke klas wil je een student verwijderen:");
+                for (; y - 1 < classesList.size(); y++) {
+                  System.out.printf("%s  %s%n", y, classesList.get(y - 1).className);
+                }
+                choice = 0;
+                do {
+                  choice = myScanner.nextInt();
+                } while (!(choice >= 1 && choice <= y - 1));
+                myScanner.skip("\n");
+                System.out.println("welke student wil je verwijderen?");
+                y = 1;
+                for (; y - 1 < classesList.get(choice - 1).classStudents.size(); y++) {
+                  System.out.printf("%s  %s%n", y,
+                      classesList.get(choice - 1).classStudents.get(y - 1).Name);
+                }
+                choice2 = 0;
+                do {
+                  choice2 = myScanner.nextInt();
+                } while (!(choice2 >= 1 && choice2 <= y - 1));
+                myScanner.skip("\n");
+                classesList.get(choice - 1)
+                    .RemoveClassStudent(classesList.get(choice - 1).classStudents.get(choice2 - 1));
+                break;
+
+                //asks for input and removes chosen class
+              case "6":
+                System.out.println("welke klas wil je verwijderen?");
+                y = 1;
+                for (; y - 1 < classesList.size(); y++) {
+                  System.out.printf("%s  %s%n", y, classesList.get(y - 1).className);
+                }
+                choice = 0;
+                do {
+                  choice = myScanner.nextInt();
+                } while (!(choice >= 1 && choice <= y - 1));
+                myScanner.skip("\n");
+                classesList.remove(choice - 1);
+                break;
+
+                // prints out all classes and occupants
+              case "7":
+                for (int i = 0; i < classesList.size(); i++) {
+                  classesList.get(i).ClassesPrinter();
+                }
+                break;
+            }
+          } while (!ch.equals("q"));
           break;
       }
-    } while (!ch.equals("q"));
+    } while (!ch.equals("quit"));
   }
 }

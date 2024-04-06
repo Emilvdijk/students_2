@@ -11,3 +11,7 @@ W
 'src/main/java/nl/emilvdijk/Student.java,1\7\17a1eba7bb5df9602d1800598882ee3e72126df0
 T
 $.idea/codeStyles/codeStyleConfig.xml,d\d\dd7b3350c29c49497756c7f32c69a3bed18b1cba
+V
+&src/main/java/nl/emilvdijk/Mentor.java,a\0\a0c34b027019b6a2eb5dbea60bf4b5e9659efbc7
+U
+%src/main/java/nl/emilvdijk/Class.java,0\a\0ad0b1081ca34984d4d522ec1778df8f5f134954
