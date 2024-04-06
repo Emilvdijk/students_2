@@ -56,7 +56,7 @@ class printing {
 
 }
 
-class Student {
+class StudentOld {
 
   ArrayList<String[]> StudentChoices(ArrayList<String[]> studentArrayList) {
     Scanner myScanner = new Scanner(System.in);
@@ -264,8 +264,7 @@ class Klas {
   }
 }
 
-class voorbeelden {
-
+class examples {
   /**
    * takes ArrayList<String[]> and fills it with example students
    *
@@ -298,6 +297,7 @@ class voorbeelden {
         "56"};
     String[] simone = {"Simone", "99", "96964623", "nice3@school3.com", "Schoolwijk", "Schoolplek",
         "57"};
+    Student ewoud = new Student("Ewoud",23,"533533234","nice@nice.nl","straatofzo 3","plaatsofzo", 6534);
     studentsArray.add(daan);
     studentsArray.add(david);
     studentsArray.add(simone);
@@ -330,17 +330,19 @@ class students2 {
   public static void main(String[] args) {
     String ch;
     Scanner myScanner = new Scanner(System.in);
-
+    Student eric = new Student("Naampje", 13, "434536345344","nice@nice.nl", "straatnaam 2", "Dingetje stad", 234523);
+    System.out.printf("naam: %-14s  leeftijd: %-7s  telefoonnr: %-15s e-mail: %-16s adres: %-16s woonplaats: %-16s studentnummer: %-16s ", eric.Name, eric.age, eric.telephoneNumber,eric.email, eric.adress, eric.place, eric.StudentNumber);
+    System.out.println();
     ArrayList<String[]> studentsArray;
-    studentsArray = voorbeelden.addSampleStudents();
+    studentsArray = examples.addSampleStudents();
 //    students2.arrayPrinter(studentsArray);
 
     ArrayList<String[]> mentorsArray;
-    mentorsArray = voorbeelden.addSampleMentors();
+    mentorsArray = examples.addSampleMentors();
 //    students2.arrayPrinter(mentorsArray);
 
     ArrayList<String[]> classesArray;
-    classesArray = voorbeelden.addSampleClasses();
+    classesArray = examples.addSampleClasses();
 //    students2.arrayPrinter(classesArray);
 
 //    System.out.println(Arrays.toString(studentsArray.get(0)));
@@ -363,7 +365,7 @@ class students2 {
 
       switch (ch) {
         case "1":
-          new Student().StudentChoices(studentsArray);
+          new StudentOld().StudentChoices(studentsArray);
 
           break;
 
