@@ -15,3 +15,5 @@ V
 &src/main/java/nl/emilvdijk/Mentor.java,a\0\a0c34b027019b6a2eb5dbea60bf4b5e9659efbc7
 U
 %src/main/java/nl/emilvdijk/Class.java,0\a\0ad0b1081ca34984d4d522ec1778df8f5f134954
+W
+'src/main/java/nl/emilvdijk/Classes.java,0\9\096138c6cc45dc634e9f6bd80e1f10244165b0ab

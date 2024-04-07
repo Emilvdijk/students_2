@@ -4,6 +4,7 @@ package nl.emilvdijk;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 
 class Students2 {
@@ -20,7 +21,7 @@ class Students2 {
     ArrayList<Student> studentsList = new ArrayList();
     ArrayList<Mentor> mentorsList = new ArrayList();
     ArrayList<Classes> classesList = new ArrayList();
-
+    Pattern emailPattern = Pattern.compile("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}");
 
     // 3 examples added for students mentors and classes and notify they have been added
     Student eric = new Student("Eric", 12, "346575764", "nice@nice.com", "Nicestraat 1", "Nicestad",
@@ -48,7 +49,7 @@ class Students2 {
     javaStudentList.add(evelien);
     ArrayList<Student> pythonStudentList = new ArrayList<>();
     ArrayList<Mentor> pythonMentorList = new ArrayList<>();
-    pythonMentorList.add(daan);
+    pythonMentorList.add(david);
     pythonStudentList.add(eric);
     pythonStudentList.add(evelien);
     ArrayList<Student> htmlStudentList = new ArrayList<>();
@@ -65,7 +66,6 @@ class Students2 {
     System.out.println("er zijn voorbeelden toevevoegd.");
     // end of example adding code
 
-
     // main menu of the system where inputs are asked
     do {
       do {
@@ -77,7 +77,6 @@ class Students2 {
             'quit' om het programma af te sluiten.""");
         ch = myScanner.nextLine();
       } while ((ch == "1") | (ch == "2") | (ch == "3") & (ch != "quit"));
-
 
       // choices for adding removing or showing of students
       switch (ch) {
@@ -122,6 +121,10 @@ class Students2 {
                 myScanner.skip("\n");
 
                 System.out.println("Vul het e-mail adress in van de nieuwe student: \n");
+                while (!myScanner.hasNext(emailPattern)) {
+                  System.out.println("Please enter a valid email address: ");
+                  myScanner.next();
+                }
                 String studentEmail = myScanner.nextLine();
 
                 System.out.println("Vul het adress van de nieuwe student in: \n");
@@ -145,19 +148,30 @@ class Students2 {
                 break;
 
               // ask for input and removes student
-                case "2":
-                System.out.println(
-                    "Vul de naam van de te verwijderen student in of 'q' om te annuleren: \n");
-                String studentDelete = myScanner.nextLine();
-                if (Objects.equals(studentDelete, "q")) {
+              case "2":
+                if (studentsList.isEmpty()){
+                  System.out.println("de studentenlijst is leeg");
                   break;
-                } else {
-                  Student.SearchAndDestroy(studentsList, studentDelete);
                 }
+                int y = 1;
+                System.out.println("welke student wil je verwijderen:");
+                for (; y - 1 < studentsList.size(); y++) {
+                  System.out.printf("%s  %s%n", y, studentsList.get(y - 1).Name);
+                }
+                int choice;
+                do {
+                  choice = myScanner.nextInt();
+                } while (!(choice >= 1 && choice <= y - 1));
+                myScanner.skip("\n");
+                studentsList.remove(choice - 1);
                 break;
 
-                // prints out all students
+              // prints out all students
               case "3":
+                if (studentsList.isEmpty()){
+                  System.out.println("de studentenlijst is leeg");
+                  break;
+                }
                 for (int i = 0; i < studentsList.size(); i++) {
                   studentsList.get(i).StudentPrinter();
                 }
@@ -169,10 +183,8 @@ class Students2 {
 
           break;
 
-
-
         // choices for adding, removing or showing of mentors
-          case "2":
+        case "2":
           do {
             do {
               System.out.println("""
@@ -213,6 +225,10 @@ class Students2 {
                 myScanner.skip("\n");
 
                 System.out.println("Vul het e-mail adress van de nieuwe mentor in: \n");
+                while (!myScanner.hasNext(emailPattern)) {
+                  System.out.println("Please enter a valid email address: ");
+                  myScanner.next();
+                }
                 String mentorEmail = myScanner.nextLine();
 
                 System.out.println("Vul het adress van de nieuwe mentor in: \n");
@@ -227,7 +243,6 @@ class Students2 {
                   myScanner.next();
                 }
                 int mentorNumber = myScanner.nextInt();
-                myScanner.skip("\n");
 
                 Mentor newMentor = new Mentor(mentorName, mentorAge, mentorPhone, mentorEmail,
                     mentorAdress,
@@ -235,20 +250,31 @@ class Students2 {
                 mentorsList.add(newMentor);
                 break;
 
-                // ask for input and removes mentor object
+              // ask for input and removes mentor object
               case "2":
-                System.out.println(
-                    "Vul de naam van de te vervijderen mentor in of q om te annuleren: \n");
-                String mentorDelete = myScanner.nextLine();
-                if (Objects.equals(mentorDelete, "q")) {
+                if (mentorsList.isEmpty()){
+                  System.out.println("de mentorenlijst is leeg");
                   break;
-                } else {
-                  Mentor.SearchAndDestroy(mentorsList, mentorDelete);
                 }
+                int y = 1;
+                System.out.println("welke mentor wil je verwijderen:");
+                for (; y - 1 < mentorsList.size(); y++) {
+                  System.out.printf("%s  %s%n", y, mentorsList.get(y - 1).Name);
+                }
+                int choice;
+                do {
+                  choice = myScanner.nextInt();
+                } while (!(choice >= 1 && choice <= y - 1));
+                myScanner.skip("\n");
+                mentorsList.remove(choice - 1);
                 break;
 
-                // prints out all mentors and details
+              // prints out all mentors and details
               case "3":
+                if (mentorsList.isEmpty()){
+                  System.out.println("de mentorenlijst is leeg");
+                  break;
+                }
                 for (int i = 0; i < mentorsList.size(); i++) {
                   mentorsList.get(i).MentorPrinter();
                 }
@@ -258,9 +284,8 @@ class Students2 {
           } while (!ch.equals("q"));
           break;
 
-
         // choices for classes like adding a class or changing its occupants
-          case "3":
+        case "3":
           do {
             do {
               System.out.println("""
@@ -283,12 +308,18 @@ class Students2 {
               case "1":
                 System.out.println("naam van de klas:");
                 String newClassName = myScanner.nextLine();
-                Classes newClass = new Classes(newClassName, null, null);
+                ArrayList<Mentor> newMentorList = new ArrayList<>();
+                ArrayList<Student> newStudentList = new ArrayList<>();
+                Classes newClass = new Classes(newClassName, newMentorList, newStudentList);
                 classesList.add(newClass);
                 break;
 
-                // ask for input and adds mentor to class
+              // ask for input and adds mentor to class
               case "2":
+                if (classesList.isEmpty()){
+                  System.out.println("de klassenlijst is leeg");
+                  break;
+                }
                 int y = 1;
                 System.out.println("aan welke klas wil je een mentor toevoegen:");
                 for (; y - 1 < classesList.size(); y++) {
@@ -310,11 +341,20 @@ class Students2 {
                   choice2 = myScanner.nextInt();
                 } while (!(choice2 >= 1 && choice2 <= y - 1));
                 myScanner.skip("\n");
+                if (classesList.get(choice - 1).classMentors.contains(
+                    mentorsList.get(choice2 - 1))) {
+                  System.out.println("mentor zit al in deze klas");
+                  break;
+                }
                 classesList.get(choice - 1).AddClassMentor(mentorsList.get(choice2 - 1));
                 break;
 
-                // ask for input and adds student to class
+              // ask for input and adds student to class
               case "3":
+                if (classesList.isEmpty()){
+                  System.out.println("de klassenlijst is leeg");
+                  break;
+                }
                 y = 1;
                 System.out.println("aan welke klas wil je een student toevoegen:");
                 for (; y - 1 < classesList.size(); y++) {
@@ -333,14 +373,22 @@ class Students2 {
                 choice2 = 0;
                 do {
                   choice2 = myScanner.nextInt();
-
                 } while (!(choice2 >= 1 && choice2 <= y - 1));
                 myScanner.skip("\n");
+                if (classesList.get(choice - 1).classStudents.contains(
+                    studentsList.get(choice2 - 1))) {
+                  System.out.println("student zit al in deze klas");
+                  break;
+                }
                 classesList.get(choice - 1).AddClassStudent(studentsList.get(choice2 - 1));
                 break;
 
-                // ask for unput and removes chosen mentor from class
+              // ask for unput and removes chosen mentor from class
               case "4":
+                if (classesList.isEmpty()){
+                  System.out.println("de klassenlijst is leeg");
+                  break;
+                }
                 y = 1;
                 System.out.println("van welke klas wil je een mentor verwijderen:");
                 for (; y - 1 < classesList.size(); y++) {
@@ -351,6 +399,10 @@ class Students2 {
                   choice = myScanner.nextInt();
                 } while (!(choice >= 1 && choice <= y - 1));
                 myScanner.skip("\n");
+                if (classesList.get(choice-1).classMentors.isEmpty()){
+                  System.out.println("in deze klas zitten geen mentoren");
+                  break;
+                }
                 System.out.println("welke mentor wil je verwijderen?");
                 y = 1;
                 for (; y - 1 < classesList.get(choice - 1).classMentors.size(); y++) {
@@ -365,8 +417,12 @@ class Students2 {
                 classesList.get(choice - 1).RemoveClassMentor(mentorsList.get(choice2 - 1));
                 break;
 
-                // ask for input and removes chosen student from class
+              // ask for input and removes chosen student from class
               case "5":
+                if (classesList.isEmpty()){
+                  System.out.println("de klassenlijst is leeg");
+                  break;
+                }
                 y = 1;
                 System.out.println("van welke klas wil je een student verwijderen:");
                 for (; y - 1 < classesList.size(); y++) {
@@ -377,6 +433,10 @@ class Students2 {
                   choice = myScanner.nextInt();
                 } while (!(choice >= 1 && choice <= y - 1));
                 myScanner.skip("\n");
+                if (classesList.get(choice-1).classStudents.isEmpty()){
+                  System.out.println("in deze klas zitten geen studenten");
+                  break;
+                }
                 System.out.println("welke student wil je verwijderen?");
                 y = 1;
                 for (; y - 1 < classesList.get(choice - 1).classStudents.size(); y++) {
@@ -392,8 +452,12 @@ class Students2 {
                     .RemoveClassStudent(classesList.get(choice - 1).classStudents.get(choice2 - 1));
                 break;
 
-                //asks for input and removes chosen class
+              //asks for input and removes chosen class
               case "6":
+                if (classesList.isEmpty()){
+                  System.out.println("de klassenlijst is leeg");
+                  break;
+                }
                 System.out.println("welke klas wil je verwijderen?");
                 y = 1;
                 for (; y - 1 < classesList.size(); y++) {
@@ -407,8 +471,12 @@ class Students2 {
                 classesList.remove(choice - 1);
                 break;
 
-                // prints out all classes and occupants
+              // prints out all classes and occupants
               case "7":
+                if (classesList.isEmpty()){
+                  System.out.println("de klassenlijst is leeg");
+                  break;
+                }
                 for (int i = 0; i < classesList.size(); i++) {
                   classesList.get(i).ClassesPrinter();
                 }
