@@ -4,7 +4,7 @@ class Student {
 
   String Name;
   int age;
-  String telephoneNumber;
+  long telephoneNumber;
   String email;
   String adress;
   String place;
@@ -22,7 +22,7 @@ class Student {
    * @param pla place of recidence of student
    * @param snr student number of student
    */
-  public Student(String nam, int ag, String t, String ema, String adr, String pla,
+  public Student(String nam, int ag, long t, String ema, String adr, String pla,
       int snr) {
     Name = nam;
     age = ag;
@@ -38,7 +38,7 @@ class Student {
    */
   void StudentPrinter() {
     System.out.printf(
-        "naam: %-14s  leeftijd: %-5s  telefoonnr: %-14s e-mail: %-23s adres: %-16s woonplaats: %-16s studentnummer: %-8s %n",
+        "naam: %-14s  leeftijd: %-5s  telefoonnr: %-18s e-mail: %-23s adres: %-16s woonplaats: %-16s studentnummer: %-8s %n",
         Name, age, telephoneNumber, email, adress, place, StudentNumber);
   }
 

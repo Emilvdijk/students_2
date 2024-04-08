@@ -24,20 +24,20 @@ class Students2 {
     Pattern emailPattern = Pattern.compile("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}");
 
     // 3 examples added for students mentors and classes and notify they have been added
-    Student eric = new Student("Eric", 12, "346575764", "nice@nice.com", "Nicestraat 1", "Nicestad",
+    Student eric = new Student("Eric", 12, 346575764L, "nice@nice.com", "Nicestraat 1", "Nicestad",
         34);
-    Student jantje = new Student("Jantje", 5, "23452345", "nice3@nice3.com", "Nicewijk 2",
+    Student jantje = new Student("Jantje", 5, 23452345L, "nice3@nice3.com", "Nicewijk 2",
         "Niceplek", 36);
-    Student evelien = new Student("Evelien", 34, "23452345", "nice2@nice2.com", "Niceweg 3",
+    Student evelien = new Student("Evelien", 34, 7654335L, "nice2@nice2.com", "Niceweg 3",
         "Nicedorp", 35);
     studentsList.add(eric);
     studentsList.add(jantje);
     studentsList.add(evelien);
-    Mentor daan = new Mentor("Daan", 55, "2345234532", "nice@school.com", "Schoolstraat",
+    Mentor daan = new Mentor("Daan", 55, 2345234532L, "nice@school.com", "Schoolstraat",
         "Schoolstad", 55);
-    Mentor david = new Mentor("David", 57, "56785867", "nice2@school2.com", "Schoolweg",
+    Mentor david = new Mentor("David", 57, 56785867L, "nice2@school2.com", "Schoolweg",
         "Schooldorp", 56);
-    Mentor simone = new Mentor("Simone", 99, "96964623", "nice3@school3.com", "Schoolwijk",
+    Mentor simone = new Mentor("Simone", 99, 96964623L, "nice3@school3.com", "Schoolwijk",
         "Schoolplek", 57);
     mentorsList.add(daan);
     mentorsList.add(david);
@@ -113,11 +113,11 @@ class Students2 {
                 myScanner.skip("\n");
                 System.out.println("Vul het telefoonnummer van de nieuwe student in: \n");
 
-                while (!myScanner.hasNextInt()) {
+                while (!myScanner.hasNextLong()) {
                   System.out.println("vul een geldig telefoonnummer in!");
                   myScanner.next();
                 }
-                String studentPhone = String.valueOf(myScanner.nextInt());
+                long studentPhone = myScanner.nextLong();
                 myScanner.skip("\n");
 
                 System.out.println("Vul het e-mail adress in van de nieuwe student: \n");
@@ -217,11 +217,11 @@ class Students2 {
                 myScanner.skip("\n");
                 System.out.println("Vul het telefoonnummer van de nieuwe mentor in: \n");
 
-                while (!myScanner.hasNextInt()) {
+                while (!myScanner.hasNextLong()) {
                   System.out.println("vul een geldig telefoonnummer in!");
                   myScanner.next();
                 }
-                String mentorPhone = String.valueOf(myScanner.nextInt());
+                long mentorPhone = myScanner.nextLong();
                 myScanner.skip("\n");
 
                 System.out.println("Vul het e-mail adress van de nieuwe mentor in: \n");

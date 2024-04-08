@@ -5,7 +5,7 @@ class Mentor {
 
   String Name;
   int age;
-  String telephoneNumber;
+  long telephoneNumber;
   String email;
   String adress;
   String place;
@@ -23,7 +23,7 @@ class Mentor {
    * @param pla place of recidence of mentor
    * @param enr employee number of mentor
    */
-  public Mentor(String nam, int ag, String t, String ema, String adr, String pla,
+  public Mentor(String nam, int ag, long t, String ema, String adr, String pla,
       int enr) {
     Name = nam;
     age = ag;
@@ -39,7 +39,7 @@ class Mentor {
    */
   void MentorPrinter() {
     System.out.printf(
-        "naam: %-14s  leeftijd: %-5s  telefoonnummer: %-14s e-mail: %-23s adres: %-16s woonplaats: %-16s werknemernummer: %-8s %n",
+        "naam: %-14s  leeftijd: %-5s  telefoonnummer: %-18s e-mail: %-23s adres: %-16s woonplaats: %-16s werknemernummer: %-8s %n",
         Name, age, telephoneNumber, email, adress, place, employeeNumber);
   }
 
