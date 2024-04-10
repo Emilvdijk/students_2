@@ -63,17 +63,14 @@ class Classes {
    */
   void classesPrinter() {
     System.out.printf("klasnaam: %-10s Mentoren: ", className);
-    if (classMentors != null) {
-      for (int i = 0; i < classMentors.size(); i++) {
-        System.out.printf("%-14s", classMentors.get(i).name);
-      }
+
+    for (Mentor classMentor : classMentors) {
+      System.out.printf("%-14s", classMentor.name);
     }
     System.out.println();
-    if (classStudents != null) {
-      System.out.print("studenten: ");
-      for (int i = 0; i < classStudents.size(); i++) {
-        System.out.printf("  " + classStudents.get(i).name);
-      }
+    System.out.print("studenten: ");
+    for (int i = 0; i < classStudents.size(); i++) {
+      System.out.printf("  " + classStudents.get(i).name);
     }
     System.out.println("\n");
   }

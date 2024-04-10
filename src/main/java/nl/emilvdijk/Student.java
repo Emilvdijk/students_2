@@ -8,7 +8,7 @@ class Student {
   String email;
   String adress;
   String place;
-  int StudentNumber;
+  int studentNumber;
 
 
   /**
@@ -30,7 +30,7 @@ class Student {
     this.email = email;
     this.adress = adress;
     this.place = place;
-    this.StudentNumber = studentNumber;
+    this.studentNumber = studentNumber;
   }
 
   /**
@@ -39,7 +39,7 @@ class Student {
   void studentPrinter() {
     System.out.printf(
         "naam: %-14s  leeftijd: %-5s  telefoonnr: %-18s e-mail: %-23s adres: %-16s woonplaats: %-16s studentnummer: %-8s %n",
-        name, age, telephoneNumber, email, adress, place, StudentNumber);
+        name, age, telephoneNumber, email, adress, place, studentNumber);
   }
 
 
