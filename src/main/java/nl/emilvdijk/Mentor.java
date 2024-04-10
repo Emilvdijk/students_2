@@ -3,9 +3,9 @@ package nl.emilvdijk;
 
 class Mentor {
 
-  String Name;
+  String name;
   int age;
-  long telephoneNumber;
+  String telephoneNumber;
   String email;
   String adress;
   String place;
@@ -15,32 +15,32 @@ class Mentor {
   /**
    * constructor for mentor class
    *
-   * @param nam name of mentor
-   * @param ag  age of mentor
-   * @param t   telephone number of mentor
-   * @param ema email of mentor
-   * @param adr adress of mentor
-   * @param pla place of recidence of mentor
-   * @param enr employee number of mentor
+   * @param name name of mentor
+   * @param age  age of mentor
+   * @param telephoneNumber   telephone number of mentor
+   * @param email email of mentor
+   * @param adress adress of mentor
+   * @param place place of recidence of mentor
+   * @param employeeNumber employee number of mentor
    */
-  public Mentor(String nam, int ag, long t, String ema, String adr, String pla,
-      int enr) {
-    Name = nam;
-    age = ag;
-    telephoneNumber = t;
-    email = ema;
-    adress = adr;
-    place = pla;
-    employeeNumber = enr;
+  public Mentor(String name, int age, String telephoneNumber, String email, String adress, String place,
+      int employeeNumber) {
+    this.name = name;
+    this.age = age;
+    this.telephoneNumber = telephoneNumber;
+    this.email = email;
+    this.adress = adress;
+    this.place = place;
+    this.employeeNumber = employeeNumber;
   }
 
   /**
    * used to print out mentor details
    */
-  void MentorPrinter() {
+  void mentorPrinter() {
     System.out.printf(
         "naam: %-14s  leeftijd: %-5s  telefoonnummer: %-18s e-mail: %-23s adres: %-16s woonplaats: %-16s werknemernummer: %-8s %n",
-        Name, age, telephoneNumber, email, adress, place, employeeNumber);
+        name, age, telephoneNumber, email, adress, place, employeeNumber);
   }
 
 }

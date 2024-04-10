@@ -2,9 +2,9 @@ package nl.emilvdijk;
 
 class Student {
 
-  String Name;
+  String name;
   int age;
-  long telephoneNumber;
+  String telephoneNumber;
   String email;
   String adress;
   String place;
@@ -14,32 +14,32 @@ class Student {
   /**
    * constructor for students class
    *
-   * @param nam name of student
-   * @param ag  age of student
-   * @param t   telephone number  of student
-   * @param ema email of student
-   * @param adr adress of student
-   * @param pla place of recidence of student
-   * @param snr student number of student
+   * @param name name of student
+   * @param age  age of student
+   * @param telephoneNumber   telephone number  of student
+   * @param email email of student
+   * @param adress adress of student
+   * @param place place of recidence of student
+   * @param studentNumber student number of student
    */
-  public Student(String nam, int ag, long t, String ema, String adr, String pla,
-      int snr) {
-    Name = nam;
-    age = ag;
-    telephoneNumber = t;
-    email = ema;
-    adress = adr;
-    place = pla;
-    StudentNumber = snr;
+  public Student(String name, int age, String telephoneNumber, String email, String adress, String place,
+      int studentNumber) {
+    this.name = name;
+    this.age = age;
+    this.telephoneNumber = telephoneNumber;
+    this.email = email;
+    this.adress = adress;
+    this.place = place;
+    this.StudentNumber = studentNumber;
   }
 
   /**
    * used for printing out student details
    */
-  void StudentPrinter() {
+  void studentPrinter() {
     System.out.printf(
         "naam: %-14s  leeftijd: %-5s  telefoonnr: %-18s e-mail: %-23s adres: %-16s woonplaats: %-16s studentnummer: %-8s %n",
-        Name, age, telephoneNumber, email, adress, place, StudentNumber);
+        name, age, telephoneNumber, email, adress, place, StudentNumber);
   }
 
 

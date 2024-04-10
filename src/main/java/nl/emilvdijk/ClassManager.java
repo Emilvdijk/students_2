@@ -55,14 +55,14 @@ public class ClassManager {
           y = 1;
           for (; y - 1 < classesList.get(choice - 1).classMentors.size(); y++) {
             System.out.printf("%s  %s%n", y,
-                classesList.get(choice - 1).classMentors.get(y - 1).Name);
+                classesList.get(choice - 1).classMentors.get(y - 1).name);
           }
           choice2 = 0;
           do {
             choice2 = myScanner.nextInt();
           } while (!(choice2 >= 1 && choice2 <= y - 1));
           myScanner.skip("\n");
-          classesList.get(choice - 1).RemoveClassMentor(mentorsList.get(choice2 - 1));
+          classesList.get(choice - 1).removeClassMentor(mentorsList.get(choice2 - 1));
           break;
 
         // ask for input and removes chosen student from class
@@ -89,7 +89,7 @@ public class ClassManager {
           y = 1;
           for (; y - 1 < classesList.get(choice - 1).classStudents.size(); y++) {
             System.out.printf("%s  %s%n", y,
-                classesList.get(choice - 1).classStudents.get(y - 1).Name);
+                classesList.get(choice - 1).classStudents.get(y - 1).name);
           }
           choice2 = 0;
           do {
@@ -97,7 +97,7 @@ public class ClassManager {
           } while (!(choice2 >= 1 && choice2 <= y - 1));
           myScanner.skip("\n");
           classesList.get(choice - 1)
-              .RemoveClassStudent(classesList.get(choice - 1).classStudents.get(choice2 - 1));
+              .removeClassStudent(classesList.get(choice - 1).classStudents.get(choice2 - 1));
           break;
 
         //asks for input and removes chosen class
@@ -126,7 +126,7 @@ public class ClassManager {
             break;
           }
           for (int i = 0; i < classesList.size(); i++) {
-            classesList.get(i).ClassesPrinter();
+            classesList.get(i).classesPrinter();
           }
           break;
       }
@@ -156,7 +156,7 @@ public class ClassManager {
     System.out.println("welke student wil je toevoegen?");
     int y = 1;
     for (; y - 1 < studentsList.size(); y++) {
-      System.out.printf("%s  %s%n", y, studentsList.get(y - 1).Name);
+      System.out.printf("%s  %s%n", y, studentsList.get(y - 1).name);
     }
     int choice2 = 0;
     do {
@@ -168,7 +168,7 @@ public class ClassManager {
       System.out.println("student zit al in deze klas");
       return;
     }
-    classesList.get(chosenClass - 1).AddClassStudent(studentsList.get(choice2 - 1));
+    classesList.get(chosenClass - 1).addClassStudent(studentsList.get(choice2 - 1));
   }
 
   private static void addMentorToClass(Scanner myScanner, ArrayList<Classes> classesList,
@@ -191,7 +191,7 @@ public class ClassManager {
     System.out.println("welke mentor wil je toevoegen?");
     y = 1;
     for (; y - 1 < mentorsList.size(); y++) {
-      System.out.printf("%s  %s%n", y, mentorsList.get(y - 1).Name);
+      System.out.printf("%s  %s%n", y, mentorsList.get(y - 1).name);
     }
     int choice2 = 0;
     do {
@@ -203,7 +203,7 @@ public class ClassManager {
       System.out.println("mentor zit al in deze klas");
       return;
     }
-    classesList.get(choice - 1).AddClassMentor(mentorsList.get(choice2 - 1));
+    classesList.get(choice - 1).addClassMentor(mentorsList.get(choice2 - 1));
   }
 
   private static void addNewClass(Scanner myScanner, ArrayList<Classes> classesList) {
@@ -229,8 +229,8 @@ public class ClassManager {
           7 om alle klassen weer te geven.
           q om terug te gaan naar het menu.""");
       ch = myScanner.nextLine();
-    } while ((ch == "1") | (ch == "2") | (ch == "3") | (ch == "4") | (ch == "5") | (ch
-        == "6") | (ch == "7") & (ch != "q"));
+    } while ((ch == "1") || (ch == "2") || (ch == "3") || (ch == "4") || (ch == "5") || (ch
+        == "6") || (ch == "7") && (ch != "q"));
     return ch;
   }
 }

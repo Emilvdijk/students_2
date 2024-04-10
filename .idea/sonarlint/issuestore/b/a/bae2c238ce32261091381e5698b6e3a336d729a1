@@ -1,171 +1,96 @@
 
-w
-java:S3740"/Provide the parametrized type for this generic.(äÓßæüÿÿÿÿ8—“Ñë1J$1ff65ef1-f301-40dd-ab70-277c9dfb66d9
-q
-java:S3740"/Provide the parametrized type for this generic.(ÒÚ—t8˜“Ñë1J$87fef477-dce5-4cf7-a52d-e7eb21494040
-r
-java:S3740"/Provide the parametrized type for this generic.(ÃÁÁß8˜“Ñë1J$f2d3d4d1-5c78-4a47-83b5-dba13df32816
-œ
-java:S1192À"XDefine a constant instead of duplicating this literal "de klassenlijst is leeg" 6 times.(ËØ†8˜“Ñë1J$3c1128eb-287e-4ece-bad2-d4a6d72b367e
-
-java:S1192Ÿ"JDefine a constant instead of duplicating this literal "%s  %s%n" 11 times.(Èÿ™¾8˜“Ñë1J$ee38e507-9e32-48ec-a86e-53a873624909
-„
-java:S4973O"<Strings and Boxed types should be compared using "equals()".(ÒØ›Üûÿÿÿÿ8š“Ñë1J$6ee467eb-ccde-487e-935d-35e571c4e368
-„
-java:S4973O"<Strings and Boxed types should be compared using "equals()".(ÒØ›Üûÿÿÿÿ8š“Ñë1J$c7dbb42d-a452-45b2-a1b8-dab620c625b1
-„
-java:S4973O"<Strings and Boxed types should be compared using "equals()".(ÒØ›Üûÿÿÿÿ8š“Ñë1J$cde1dd6c-2b73-4f14-88a2-5ae5e29e52f1
-„
-java:S4973O"<Strings and Boxed types should be compared using "equals()".(ÒØ›Üûÿÿÿÿ8š“Ñë1J$a9f18320-ec7f-4057-b4db-1313213051f7
-„
-java:S4973]"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8š“Ñë1J$ae10b3a4-c6c2-4658-84f0-24a2856fe4c7
-„
-java:S4973]"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8›“Ñë1J$efe9ce53-0e2c-4355-b230-2809a02eea87
-„
-java:S4973]"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8›“Ñë1J$8c543bf2-4427-4cbf-829e-c3f522484813
-„
-java:S4973]"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8›“Ñë1J$1630ffe6-9d9d-4cd8-80f8-757c8f15e72e
-…
-java:S4973Å"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8›“Ñë1J$c9ed9262-19f9-4342-a3ed-305a0be5b6d6
-…
-java:S4973Å"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8›“Ñë1J$32c1cbf4-0e9d-47a6-b9ce-60317291045e
-…
-java:S4973Å"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8›“Ñë1J$2be8367a-ab52-4a49-bf2b-8323c6178f29
-…
-java:S4973Å"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8›“Ñë1J$18fb6e9a-46b6-424d-a203-a122f48eb622
-…
-java:S4973®"<Strings and Boxed types should be compared using "equals()".( œœÒüÿÿÿÿ8›“Ñë1J$78466fe5-2edf-4d9b-b3df-a5e4099bc755
-…
-java:S4973®"<Strings and Boxed types should be compared using "equals()".( œœÒüÿÿÿÿ8›“Ñë1J$15495dd9-5713-475c-a9d9-98fbc67fcc25
-…
-java:S4973®"<Strings and Boxed types should be compared using "equals()".( œœÒüÿÿÿÿ8›“Ñë1J$491d1e78-8c6c-473a-b94c-2a77cf88a0d5
-…
-java:S4973®"<Strings and Boxed types should be compared using "equals()".( œœÒüÿÿÿÿ8›“Ñë1J$29adb1c8-ceb5-4d90-bd04-2d1b380f8b62
-…
-java:S4973®"<Strings and Boxed types should be compared using "equals()".( œœÒüÿÿÿÿ8›“Ñë1J$df8e0b14-ed5a-4c07-aebe-2a9fd672896f
-…
-java:S4973¯"<Strings and Boxed types should be compared using "equals()".(˜”ï…şÿÿÿÿ8›“Ñë1J$6ab2090c-861e-4b12-bb22-7304bc5cedf2
-…
-java:S4973¯"<Strings and Boxed types should be compared using "equals()".(˜”ï…şÿÿÿÿ8›“Ñë1J$14001a86-cf48-4ba0-99cd-34b52249f874
-…
-java:S4973¯"<Strings and Boxed types should be compared using "equals()".(˜”ï…şÿÿÿÿ8›“Ñë1J$d0ce073c-4e80-4ea8-b3fe-ff573fc4cd18
-–
-java:S3776"SRefactor this method to reduce its Cognitive Complexity from 294 to the 15 allowed.(Çµí‘8Á”Ñë1J$830795f2-3bb1-48fd-99ec-b5f82279b8c8
-}
-java:S1854ë":Remove this useless assignment to local variable "choice".(Ûİåo8Ã”Ñë1J$e206bf74-4ff8-4fa3-a82b-d77fe87a288c
-
-java:S1854õ";Remove this useless assignment to local variable "choice2".(¾Ğæâ8Ã”Ñë1J$9b03469b-8c34-41d0-a5fd-bfa6eae28d9a
-}
-java:S1854":Remove this useless assignment to local variable "choice".(Ûİåo8Ã”Ñë1J$0d8dac5c-574d-4e6c-839a-d6e01fc687b3
-
-java:S1854œ";Remove this useless assignment to local variable "choice2".(¾Ğæâ8Ã”Ñë1J$392df5da-bbeb-414d-ad42-c7e2e05f5b8c
-}
-java:S1854¯":Remove this useless assignment to local variable "choice".(Ûİåo8Ã”Ñë1J$46ed2486-56f0-41b6-a7d9-5d49840ba9e2
-
-java:S1854¾";Remove this useless assignment to local variable "choice2".(¾Ğæâ8Ã”Ñë1J$eaa6f0a1-c62d-4582-9fe9-76532ebab5d4
-}
-java:S1854Ò":Remove this useless assignment to local variable "choice".(Ûİåo8Ã”Ñë1J$31c9f5d0-bc67-46ff-b622-798643862724
-m	java:S106B"+Replace this use of System.out by a logger.(ÅÅ¢á8È”Ñë1J$5e890696-0260-4743-bda2-a1e01469b966
-m	java:S106H"+Replace this use of System.out by a logger.(Îñë8È”Ñë1J$6fa279c5-1211-4c2e-a40f-b50fd1f6cc22
-a
-java:S2178O"Correct this "|" to "||".(ÒØ›Üûÿÿÿÿ8É”Ñë1J$da4e03d1-958c-4b8c-8f9b-7c1e86a3d4a7
-a
-java:S2178O"Correct this "|" to "||".(ÒØ›Üûÿÿÿÿ8É”Ñë1J$a4e8bbac-1647-4c27-8e5f-aa4bd3985a23
-a
-java:S2178O"Correct this "&" to "&&".(ÒØ›Üûÿÿÿÿ8É”Ñë1J$4d04a3b5-2926-43ae-a9f5-46ed62cbb65f
-i	java:S131R""Add a default case to this switch.(Œ¹ÿÿÿÿÿ8Ê”Ñë1J$2efa1e44-1f16-4f0c-bf23-9f949d5c8fd7
-m	java:S106V"+Replace this use of System.out by a logger.(Îñë8Ê”Ñë1J$ed0764ea-777f-4fe0-9939-137aad854e73
-a
-java:S2178]"Correct this "|" to "||".(æ‰‚ıùÿÿÿÿ8Ê”Ñë1J$880e7af0-58be-4735-99c0-d0998eb02a2d
-a
-java:S2178]"Correct this "|" to "||".(æ‰‚ıùÿÿÿÿ8Ê”Ñë1J$19141db6-be30-4347-87b4-37853d9fb25e
-a
-java:S2178]"Correct this "&" to "&&".(æ‰‚ıùÿÿÿÿ8Ê”Ñë1J$ac83e7fe-44cb-4411-8549-8fbf19b03472
-i	java:S131_""Add a default case to this switch.(Œ¹ÿÿÿÿÿ8Ê”Ñë1J$35a09530-74be-4389-8853-1e697d29be38
-m	java:S106c"+Replace this use of System.out by a logger.(ÆÀûı8Ê”Ñë1J$817e0344-f737-4ec5-885c-8753153fe19d
-r	java:S106j"+Replace this use of System.out by a logger.(³İ‘—ûÿÿÿÿ8Ê”Ñë1J$cffbf784-0e6d-42f6-8870-a52d1a941255
-r	java:S106m"+Replace this use of System.out by a logger.(ÃŸøóÿÿÿÿÿ8Ë”Ñë1J$2d5fd6fc-e2d2-46fb-bd16-de01de38ff86
-m	java:S106r"+Replace this use of System.out by a logger.(Øœƒ8Ë”Ñë1J$24417c2a-8d46-47e4-a379-4dcc259435bd
-m	java:S106u"+Replace this use of System.out by a logger.(œÜùó8Ë”Ñë1J$81832b10-c97f-4247-b681-4a5cfbc8cdd8
-m	java:S106{"+Replace this use of System.out by a logger.(‚üÃ—8Ë”Ñë1J$80533555-ebba-4847-8dc7-117050a5f5a9
-m	java:S106}"+Replace this use of System.out by a logger.(îôúƒ8Ë”Ñë1J$3c92ed25-a293-45eb-8949-1691752f39d5
-s	java:S106‚"+Replace this use of System.out by a logger.(¥–ùíúÿÿÿÿ8Ë”Ñë1J$8be340fb-35cd-40ba-8548-bb622fbbf696
-s	java:S106…"+Replace this use of System.out by a logger.(¶µ‰óûÿÿÿÿ8Ì”Ñë1J$882ea184-632f-4e69-adf9-2c9a3c206f88
-s	java:S106ˆ"+Replace this use of System.out by a logger.(á°æ¨üÿÿÿÿ8Ì”Ñë1J$b4e193f3-42d5-4d61-aa76-827258d35737
-n	java:S106Š"+Replace this use of System.out by a logger.(ÕØÈÄ8Ì”Ñë1J$132edf83-de8b-42d3-8a1a-6424734384be
-n	java:S106™"+Replace this use of System.out by a logger.(Ó©ßä8Ì”Ñë1J$9e0dc3de-8e18-4d97-b81a-f1720cab9a2d
-s	java:S106"+Replace this use of System.out by a logger.(½•Ìõøÿÿÿÿ8Ì”Ñë1J$901e6d38-3741-4de9-b0cb-c277c1a978e6
-n	java:S106Ÿ"+Replace this use of System.out by a logger.(Èÿ™¾8Ì”Ñë1J$8026f39a-d488-4fb2-b697-bbc719816d60
-n	java:S106¬"+Replace this use of System.out by a logger.(Ó©ßä8Í”Ñë1J$3bd145db-ad34-4201-91a5-d90cbf24cb5f
-s	java:S106²"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8Í”Ñë1J$33a7cc49-0228-4e7d-b380-b8b4c12eb0f1
-n	java:S106¾"+Replace this use of System.out by a logger.(Îñë8Í”Ñë1J$0201a302-75ac-4468-bf9f-d8b8221ac34f
-b
-java:S2178Å"Correct this "|" to "||".(æ‰‚ıùÿÿÿÿ8Î”Ñë1J$28491959-0251-4177-8b4f-2a3ac9e96256
-b
-java:S2178Å"Correct this "|" to "||".(æ‰‚ıùÿÿÿÿ8Î”Ñë1J$f786f955-5d74-4777-a4d6-12a66ae999b3
-b
-java:S2178Å"Correct this "&" to "&&".(æ‰‚ıùÿÿÿÿ8Î”Ñë1J$f009ed81-abea-41a5-b334-eed25ba5534e
-j	java:S131Ç""Add a default case to this switch.(Œ¹ÿÿÿÿÿ8Î”Ñë1J$6c71359f-0a9c-41ac-b784-8213862392df
-n	java:S106Ë"+Replace this use of System.out by a logger.(ÆÀûı8Î”Ñë1J$1255cce8-de74-4615-96a9-5bf9dea3d577
-m	java:S106Ò"+Replace this use of System.out by a logger.(¶ÖŸn8Î”Ñë1J$4783d8f4-49c6-4bee-bb33-8133e221d0c3
-s	java:S106Õ"+Replace this use of System.out by a logger.(ÃŸøóÿÿÿÿÿ8Î”Ñë1J$b5eb937d-09d0-4c5d-b95e-9dff7560a189
-s	java:S106Ú"+Replace this use of System.out by a logger.(ÚÓÂïıÿÿÿÿ8Î”Ñë1J$a8ef8266-c442-44fd-80ac-8e2684a0ec87
-n	java:S106İ"+Replace this use of System.out by a logger.(œÜùó8Î”Ñë1J$9a065f8c-5785-41a9-99e5-6d2450b43cf1
-s	java:S106ã"+Replace this use of System.out by a logger.(Œ±Îúÿÿÿÿ8Ï”Ñë1J$1074fdff-067b-4beb-a277-3af71935f527
-n	java:S106å"+Replace this use of System.out by a logger.(îôúƒ8Ï”Ñë1J$9c960515-2eeb-4388-b8ec-93ba6ccdd638
-n	java:S106ê"+Replace this use of System.out by a logger.(Àòìè8Ï”Ñë1J$d83b32a8-c495-411c-bf20-058c998dd5a4
-n	java:S106í"+Replace this use of System.out by a logger.(¾šâ8Ï”Ñë1J$ac2a3bd0-b583-4be2-b0ac-93fed98c29d8
-n	java:S106ğ"+Replace this use of System.out by a logger.(Õ’”Š8Ï”Ñë1J$14bdae36-1aeb-4af6-a653-86cceaba1f00
-n	java:S106ò"+Replace this use of System.out by a logger.(Öèüä8Ï”Ñë1J$dc66398e-20e8-4a65-8f05-d0856eb4c181
-n	java:S106€"+Replace this use of System.out by a logger.(—€€Ç8Ğ”Ñë1J$05090da4-44b1-48ee-86f5-a23b3c43a28a
-s	java:S106„"+Replace this use of System.out by a logger.(¾«Ã¤şÿÿÿÿ8Ğ”Ñë1J$9f732e7a-fe7c-47fb-88cf-e50b40cfa91f
-n	java:S106†"+Replace this use of System.out by a logger.(å®²ô8Ğ”Ñë1J$b5aecdd1-dd00-41df-8e6d-ecad27184711
-n	java:S106“"+Replace this use of System.out by a logger.(—€€Ç8Ğ”Ñë1J$6d2d1c25-b4a7-4baf-a85a-e8b9354d88dc
-s	java:S106™"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8Ñ”Ñë1J$42b03ce0-b85f-47cc-8797-09760c2593f1
-n	java:S106£"+Replace this use of System.out by a logger.(Îñë8Ñ”Ñë1J$d3f4089e-6b15-4eca-9f9a-161ed9e5a09c
-b
-java:S2178¯"Correct this "|" to "||".(˜”ï…şÿÿÿÿ8Ñ”Ñë1J$fe0e68d6-ef90-44a7-9faa-2d4431a9bdf4
-b
-java:S2178®"Correct this "|" to "||".( œœÒüÿÿÿÿ8Ñ”Ñë1J$e9e64dfb-4840-4c9b-a51a-cdf46cb17469
-b
-java:S2178®"Correct this "|" to "||".( œœÒüÿÿÿÿ8Ñ”Ñë1J$d8ea1ef6-4a49-4bab-9a36-5eefb228f9e1
-b
-java:S2178®"Correct this "|" to "||".( œœÒüÿÿÿÿ8Ñ”Ñë1J$3c7bccb8-fbd7-4687-9b97-5bcb7c9d596c
-b
-java:S2178®"Correct this "|" to "||".( œœÒüÿÿÿÿ8Ñ”Ñë1J$97d6554e-179c-4f54-871b-442f45289fbd
-b
-java:S2178®"Correct this "|" to "||".( œœÒüÿÿÿÿ8Ñ”Ñë1J$0347ebd5-f5fb-4308-ac41-0e8400db47cd
-b
-java:S2178¯"Correct this "&" to "&&".(˜”ï…şÿÿÿÿ8Ñ”Ñë1J$651d8c34-74c3-48a3-81db-55eb777c470e
-j	java:S131±""Add a default case to this switch.(Œ¹ÿÿÿÿÿ8Ò”Ñë1J$e38db707-cf47-43c5-a094-c249a0280c3c
-n	java:S106µ"+Replace this use of System.out by a logger.(÷ı„8Ò”Ñë1J$59fdba98-a578-4b9f-8f18-5a1a2057bdfd
-n	java:S106À"+Replace this use of System.out by a logger.(ËØ†8Ò”Ñë1J$c5b547dd-e88e-484f-a3b5-9e9667b7b823
-n	java:S106Ä"+Replace this use of System.out by a logger.(ºğúö8Ò”Ñë1J$9c90c551-a42a-4178-bfe4-6fc97cb169e3
-n	java:S106Æ"+Replace this use of System.out by a logger.(Ë€¬É8Ó”Ñë1J$ec6b28ef-f998-427d-b8aa-973c370b889d
-n	java:S106Î"+Replace this use of System.out by a logger.(­ïš³8Ó”Ñë1J$302232c7-50ac-42b3-b318-77dbe579ebbc
-n	java:S106Ñ"+Replace this use of System.out by a logger.(å®²ô8Ó”Ñë1J$8df3af33-9e32-4d08-b69b-d7cb097379c2
-s	java:S106Ú"+Replace this use of System.out by a logger.(é‰ò‘ıÿÿÿÿ8Ó”Ñë1J$bb11f268-2a32-4f31-a80b-2a37068368e9
-n	java:S106ã"+Replace this use of System.out by a logger.(ËØ†8Ô”Ñë1J$771f8093-f3d1-4d06-bc7d-1f4ed40280be
-n	java:S106ç"+Replace this use of System.out by a logger.(ŸŞÑç8Ô”Ñë1J$297b7b61-e3fb-4017-a6d3-c747367b787f
-n	java:S106é"+Replace this use of System.out by a logger.(Ë€¬É8Ô”Ñë1J$ef140c95-eb49-4d2c-9476-ee3559f5c39f
-s	java:S106ğ"+Replace this use of System.out by a logger.(¶‹œüÿÿÿÿ8Õ”Ñë1J$abefcac1-6a19-4f08-bf18-df9a83ba599d
-n	java:S106ó"+Replace this use of System.out by a logger.(Èÿ™¾8Õ”Ñë1J$ab3b5e5d-10e9-45a4-a9ed-56e5d133619c
-s	java:S106ü"+Replace this use of System.out by a logger.(îÚ¼„ûÿÿÿÿ8Õ”Ñë1J$22dbd338-e560-4b65-a982-85e545518cd2
-n	java:S106…"+Replace this use of System.out by a logger.(ËØ†8Õ”Ñë1J$e28596ef-141e-4131-a75f-88b8ad2af8b5
-s	java:S106‰"+Replace this use of System.out by a logger.(®‚èšûÿÿÿÿ8Ö”Ñë1J$29d7acbb-a467-4d42-9854-b14a40c3a370
-n	java:S106‹"+Replace this use of System.out by a logger.(Ë€¬É8Ö”Ñë1J$f285a320-435e-4641-93f0-0ed6b19607b1
-n	java:S106“"+Replace this use of System.out by a logger.(´Õ¦³8Ö”Ñë1J$0a095648-91b0-4a8e-9104-623ee87ecadd
-n	java:S106–"+Replace this use of System.out by a logger.(é­¸ê8Ö”Ñë1J$331cb956-3657-4ce6-bd36-f9c5ba0572b8
-s	java:S106™"+Replace this use of System.out by a logger.(±˜˜Çÿÿÿÿÿ8Ö”Ñë1J$8d8c3a0e-5738-454f-91e5-f786b3c8999d
-n	java:S106§"+Replace this use of System.out by a logger.(ËØ†8×”Ñë1J$abf36701-4cfd-4a9f-8d66-2654fab0d9e8
-s	java:S106«"+Replace this use of System.out by a logger.(°ÛÍƒÿÿÿÿÿ8×”Ñë1J$942d7f60-d5ae-41ec-9b3f-27b347209b78
-n	java:S106­"+Replace this use of System.out by a logger.(Ë€¬É8×”Ñë1J$6c9f8db5-9f3b-4628-841a-80a804cddd05
-n	java:S106µ"+Replace this use of System.out by a logger.(†úéì8×”Ñë1J$bb07e03e-613a-403e-a20b-9f5160def74c
-n	java:S106¸"+Replace this use of System.out by a logger.(–¾®Ğ8×”Ñë1J$9b7d92c4-e30f-49a0-a8a7-a01d029afede
-s	java:S106»"+Replace this use of System.out by a logger.(±˜˜Çÿÿÿÿÿ8Ø”Ñë1J$2cda32a4-b0d3-45cf-be8c-9812cb34ea42
-n	java:S106Ê"+Replace this use of System.out by a logger.(ËØ†8Ø”Ñë1J$6126d00c-6505-4895-b5ed-cdf77bc0f012
-n	java:S106Í"+Replace this use of System.out by a logger.(ÌØûµ8Ø”Ñë1J$ea9aa887-2df5-4bd0-89da-bfd29ab07b46
-n	java:S106Ğ"+Replace this use of System.out by a logger.(Ë€¬É8Ø”Ñë1J$d7e55161-df90-45c1-b335-e340517aeb28
-n	java:S106İ"+Replace this use of System.out by a logger.(ËØ†8Ù”Ñë1J$834b6a49-76dd-45e8-b4e9-fee5081d823d
-Š
-java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 393 to 64, Complexity from 85 to 14, Nesting Level from 5 to 2, Number of Variables from 52 to 6.(Çµí‘8Ú”Ñë1J$d2b83a35-9f33-4659-86ac-546d6a146f2c
+Q
+java:S3740"/Provide the parametrized type for this generic.(äÓßæüÿÿÿÿ8Ê­Ü¿ì1
+K
+java:S3740"/Provide the parametrized type for this generic.(ÒÚ—t8Ê­Ü¿ì1
+L
+java:S3740""/Provide the parametrized type for this generic.(ÃÁÁß8Ê­Ü¿ì1
+^
+java:S49732"<Strings and Boxed types should be compared using "equals()".(ÒØ›Üûÿÿÿÿ8Ï­Ü¿ì1
+^
+java:S49732"<Strings and Boxed types should be compared using "equals()".(ÒØ›Üûÿÿÿÿ8Ğ­Ü¿ì1
+^
+java:S49732"<Strings and Boxed types should be compared using "equals()".(ÒØ›Üûÿÿÿÿ8Ğ­Ü¿ì1
+^
+java:S49732"<Strings and Boxed types should be compared using "equals()".(ÒØ›Üûÿÿÿÿ8Ğ­Ü¿ì1
+^
+java:S4973S"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8Ğ­Ü¿ì1
+^
+java:S4973S"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8Ğ­Ü¿ì1
+^
+java:S4973S"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8Ğ­Ü¿ì1
+^
+java:S4973S"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8Ğ­Ü¿ì1
+_
+java:S4973º"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8Ñ­Ü¿ì1
+_
+java:S4973º"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8Ñ­Ü¿ì1
+_
+java:S4973º"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8Ñ­Ü¿ì1
+_
+java:S4973º"<Strings and Boxed types should be compared using "equals()".(æ‰‚ıùÿÿÿÿ8Ñ­Ü¿ì1
+G	java:S106%"+Replace this use of System.out by a logger.(ÅÅ¢á8ù±Ü¿ì1
+G	java:S106+"+Replace this use of System.out by a logger.(Îñë8ú±Ü¿ì1
+;
+java:S21782"Correct this "|" to "||".(ÒØ›Üûÿÿÿÿ8û±Ü¿ì1
+;
+java:S21782"Correct this "|" to "||".(ÒØ›Üûÿÿÿÿ8û±Ü¿ì1
+;
+java:S21782"Correct this "&" to "&&".(ÒØ›Üûÿÿÿÿ8ü±Ü¿ì1
+C	java:S1315""Add a default case to this switch.(Œ¹ÿÿÿÿÿ8ı±Ü¿ì1
+t
+java:S3776G"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(ˆõïœûÿÿÿÿ8€²Ü¿ì1
+G	java:S106L"+Replace this use of System.out by a logger.(Îñë8‚²Ü¿ì1
+;
+java:S2178S"Correct this "|" to "||".(æ‰‚ıùÿÿÿÿ8ƒ²Ü¿ì1
+;
+java:S2178S"Correct this "|" to "||".(æ‰‚ıùÿÿÿÿ8ƒ²Ü¿ì1
+;
+java:S2178S"Correct this "&" to "&&".(æ‰‚ıùÿÿÿÿ8ƒ²Ü¿ì1
+C	java:S131U""Add a default case to this switch.(Œ¹ÿÿÿÿÿ8„²Ü¿ì1
+G	java:S106Y"+Replace this use of System.out by a logger.(ÆÀûı8„²Ü¿ì1
+F	java:S106`"+Replace this use of System.out by a logger.(¶ÖŸn8…²Ü¿ì1
+L	java:S106c"+Replace this use of System.out by a logger.(ÃŸøóÿÿÿÿÿ8†²Ü¿ì1
+L	java:S106h"+Replace this use of System.out by a logger.(ÚÓÂïıÿÿÿÿ8‡²Ü¿ì1
+G	java:S106k"+Replace this use of System.out by a logger.(œÜùó8‡²Ü¿ì1
+L	java:S106q"+Replace this use of System.out by a logger.(Œ±Îúÿÿÿÿ8ˆ²Ü¿ì1
+G	java:S106s"+Replace this use of System.out by a logger.(îôúƒ8‰²Ü¿ì1
+G	java:S106x"+Replace this use of System.out by a logger.(Àòìè8‰²Ü¿ì1
+G	java:S106{"+Replace this use of System.out by a logger.(¾šâ8Š²Ü¿ì1
+G	java:S106~"+Replace this use of System.out by a logger.(Õ’”Š8Š²Ü¿ì1
+H	java:S106€"+Replace this use of System.out by a logger.(Öèüä8‹²Ü¿ì1
+H	java:S106"+Replace this use of System.out by a logger.(—€€Ç8Œ²Ü¿ì1
+M	java:S106’"+Replace this use of System.out by a logger.(¾«Ã¤şÿÿÿÿ8Œ²Ü¿ì1
+H	java:S106”"+Replace this use of System.out by a logger.(å®²ô8²Ü¿ì1
+H	java:S106¡"+Replace this use of System.out by a logger.(—€€Ç8²Ü¿ì1
+M	java:S106§"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8²Ü¿ì1
+p
+java:S3776®"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(ƒÏëç8‘²Ü¿ì1
+H	java:S106³"+Replace this use of System.out by a logger.(Îñë8’²Ü¿ì1
+<
+java:S2178º"Correct this "|" to "||".(æ‰‚ıùÿÿÿÿ8“²Ü¿ì1
+<
+java:S2178º"Correct this "|" to "||".(æ‰‚ıùÿÿÿÿ8“²Ü¿ì1
+<
+java:S2178º"Correct this "&" to "&&".(æ‰‚ıùÿÿÿÿ8“²Ü¿ì1
+D	java:S131¼""Add a default case to this switch.(Œ¹ÿÿÿÿÿ8“²Ü¿ì1
+H	java:S106À"+Replace this use of System.out by a logger.(ÆÀûı8”²Ü¿ì1
+M	java:S106Ç"+Replace this use of System.out by a logger.(³İ‘—ûÿÿÿÿ8”²Ü¿ì1
+M	java:S106Ê"+Replace this use of System.out by a logger.(ÃŸøóÿÿÿÿÿ8•²Ü¿ì1
+H	java:S106Ï"+Replace this use of System.out by a logger.(Øœƒ8•²Ü¿ì1
+H	java:S106Ò"+Replace this use of System.out by a logger.(œÜùó8–²Ü¿ì1
+H	java:S106Ø"+Replace this use of System.out by a logger.(‚üÃ—8–²Ü¿ì1
+H	java:S106Ú"+Replace this use of System.out by a logger.(îôúƒ8—²Ü¿ì1
+M	java:S106ß"+Replace this use of System.out by a logger.(¥–ùíúÿÿÿÿ8—²Ü¿ì1
+M	java:S106â"+Replace this use of System.out by a logger.(¶µ‰óûÿÿÿÿ8˜²Ü¿ì1
+M	java:S106å"+Replace this use of System.out by a logger.(á°æ¨üÿÿÿÿ8˜²Ü¿ì1
+H	java:S106ç"+Replace this use of System.out by a logger.(ÕØÈÄ8˜²Ü¿ì1
+H	java:S106ö"+Replace this use of System.out by a logger.(Ó©ßä8š²Ü¿ì1
+M	java:S106ú"+Replace this use of System.out by a logger.(½•Ìõøÿÿÿÿ8›²Ü¿ì1
+H	java:S106ü"+Replace this use of System.out by a logger.(Èÿ™¾8œ²Ü¿ì1
+H	java:S106‰"+Replace this use of System.out by a logger.(Ó©ßä8²Ü¿ì1
+M	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8²Ü¿ì1
+è
+java:S6541G"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 82 to 64, Complexity from 17 to 14, Nesting Level from 3 to 2, Number of Variables from 15 to 6.(ˆõïœûÿÿÿÿ8¥²Ü¿ì1
+ä
+java:S6541®"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 83 to 64, Complexity from 17 to 14, Nesting Level from 3 to 2, Number of Variables from 15 to 6.(ƒÏëç8¦²Ü¿ì1

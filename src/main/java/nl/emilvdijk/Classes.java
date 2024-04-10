@@ -27,7 +27,7 @@ class Classes {
    *
    * @param classMentor Mentor class object to add
    */
-  public void AddClassMentor(Mentor classMentor) {
+  public void addClassMentor(Mentor classMentor) {
     this.classMentors.add(classMentor);
   }
 
@@ -36,7 +36,7 @@ class Classes {
    *
    * @param classStudent student class object to add
    */
-  public void AddClassStudent(Student classStudent) {
+  public void addClassStudent(Student classStudent) {
     this.classStudents.add(classStudent);
   }
 
@@ -45,7 +45,7 @@ class Classes {
    *
    * @param classMentor mentor class object to remove from list
    */
-  public void RemoveClassMentor(Mentor classMentor) {
+  public void removeClassMentor(Mentor classMentor) {
     this.classMentors.remove(classMentor);
   }
 
@@ -54,25 +54,25 @@ class Classes {
    *
    * @param classStudent student class object to remove from list
    */
-  public void RemoveClassStudent(Student classStudent) {
+  public void removeClassStudent(Student classStudent) {
     this.classStudents.remove(classStudent);
   }
 
   /**
    * used to print out class details
    */
-  void ClassesPrinter() {
+  void classesPrinter() {
     System.out.printf("klasnaam: %-10s Mentoren: ", className);
     if (classMentors != null) {
       for (int i = 0; i < classMentors.size(); i++) {
-        System.out.printf("%-14s", classMentors.get(i).Name);
+        System.out.printf("%-14s", classMentors.get(i).name);
       }
     }
     System.out.println();
     if (classStudents != null) {
       System.out.print("studenten: ");
       for (int i = 0; i < classStudents.size(); i++) {
-        System.out.printf("  " + classStudents.get(i).Name);
+        System.out.printf("  " + classStudents.get(i).name);
       }
     }
     System.out.println("\n");
