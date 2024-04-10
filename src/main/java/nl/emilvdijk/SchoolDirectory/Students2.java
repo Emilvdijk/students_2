@@ -1,4 +1,4 @@
-package nl.emilvdijk;
+package nl.emilvdijk.SchoolDirectory;
 
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ class Students2 {
    *
    * @param args not used
    */
-  public static void main(String[] args) {
+  static void main(String[] args) {
     String ch;
     Scanner myScanner = new Scanner(System.in);
     Pattern emailPattern = Pattern.compile("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}");

@@ -1,4 +1,4 @@
-package nl.emilvdijk;
+package nl.emilvdijk.SchoolDirectory;
 
 class Student {
 
@@ -22,7 +22,7 @@ class Student {
    * @param place place of recidence of student
    * @param studentNumber student number of student
    */
-  public Student(String name, int age, String telephoneNumber, String email, String adress, String place,
+  Student(String name, int age, String telephoneNumber, String email, String adress, String place,
       int studentNumber) {
     this.name = name;
     this.age = age;

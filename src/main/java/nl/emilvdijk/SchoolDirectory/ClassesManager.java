@@ -1,11 +1,11 @@
-package nl.emilvdijk;
+package nl.emilvdijk.SchoolDirectory;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ClassesManager {
+class ClassesManager {
 
-  public static void manageClasses(Scanner myScanner, ArrayList<Classes> classesList,
+  static void manageClasses(Scanner myScanner, ArrayList<Classes> classesList,
       ArrayList<Mentor> mentorsList, ArrayList<Student> studentsList) {
     String ch;
     do {

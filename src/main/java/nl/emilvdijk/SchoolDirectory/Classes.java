@@ -1,4 +1,4 @@
-package nl.emilvdijk;
+package nl.emilvdijk.SchoolDirectory;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,7 @@ class Classes {
    * @param classMentors  arraylist<Mentor>  list of mentor class objects
    * @param classStudents arraylist<Student> list of student class objects
    */
-  public Classes(String className, ArrayList<Mentor> classMentors,
+  Classes(String className, ArrayList<Mentor> classMentors,
       ArrayList<Student> classStudents) {
     this.className = className;
     this.classMentors = classMentors;
@@ -27,7 +27,7 @@ class Classes {
    *
    * @param classMentor Mentor class object to add
    */
-  public void addClassMentor(Mentor classMentor) {
+  void addClassMentor(Mentor classMentor) {
     this.classMentors.add(classMentor);
   }
 
@@ -36,7 +36,7 @@ class Classes {
    *
    * @param classStudent student class object to add
    */
-  public void addClassStudent(Student classStudent) {
+  void addClassStudent(Student classStudent) {
     this.classStudents.add(classStudent);
   }
 
@@ -45,7 +45,7 @@ class Classes {
    *
    * @param classMentor mentor class object to remove from list
    */
-  public void removeClassMentor(Mentor classMentor) {
+  void removeClassMentor(Mentor classMentor) {
     this.classMentors.remove(classMentor);
   }
 
@@ -54,7 +54,7 @@ class Classes {
    *
    * @param classStudent student class object to remove from list
    */
-  public void removeClassStudent(Student classStudent) {
+  void removeClassStudent(Student classStudent) {
     this.classStudents.remove(classStudent);
   }
 

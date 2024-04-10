@@ -1,4 +1,4 @@
-package nl.emilvdijk;
+package nl.emilvdijk.SchoolDirectory;
 
 
 class Mentor {
@@ -23,7 +23,7 @@ class Mentor {
    * @param place place of recidence of mentor
    * @param employeeNumber employee number of mentor
    */
-  public Mentor(String name, int age, String telephoneNumber, String email, String adress, String place,
+  Mentor(String name, int age, String telephoneNumber, String email, String adress, String place,
       int employeeNumber) {
     this.name = name;
     this.age = age;

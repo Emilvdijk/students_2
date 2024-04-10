@@ -1,6 +1,4 @@
 
-S
-#src/main/java/nl/emilvdijk/App.java,b\a\bae2c238ce32261091381e5698b6e3a336d729a1
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 
@@ -17,11 +15,23 @@ W
 'src/main/java/nl/emilvdijk/Classes.java,0\9\096138c6cc45dc634e9f6bd80e1f10244165b0ab
 Y
 )src/main/java/nl/emilvdijk/Students2.java,4\0\4020b372d2665f5f89606705cde9d1a1045daf4d
-\
-,src/main/java/nl/emilvdijk/ClassManager.java,c\c\cc53c0b83cefa9365e440e173435f007f76856f9
 ]
 -src/main/java/nl/emilvdijk/MentorManager.java,9\b\9b1f2d94cd21de035a5f920f965ea36e17ad5a12
 ^
 .src/main/java/nl/emilvdijk/StudentManager.java,f\2\f28700bb578a6e5dca65490434c61076138b5d69
 ^
 .src/main/java/nl/emilvdijk/ClassesManager.java,1\5\156cf0b7e9330e2b0b4045103d5bf85a5badfbca
+n
+>src/main/java/nl/emilvdijk/SchoolDirectory/StudentManager.java,8\7\87032ee69c27974f504710411242422de201d7f9
+f
+6src/main/java/nl/emilvdijk/SchoolDirectory/Mentor.java,4\9\490bdc898f1684c3f3fcdc3dc2147021f6a80602
+g
+7src/main/java/nl/emilvdijk/SchoolDirectory/Classes.java,e\0\e0cd7723746ddafb930234475f477509915643b8
+g
+7src/main/java/nl/emilvdijk/SchoolDirectory/Student.java,f\6\f671437df58033846957459137bf99420edff312
+m
+=src/main/java/nl/emilvdijk/SchoolDirectory/MentorManager.java,f\6\f66cf49dc469e42d274de2af3bdaa6e1fb5da8e6
+n
+>src/main/java/nl/emilvdijk/SchoolDirectory/ClassesManager.java,0\5\051c319b9e68b343e6dd604c9dcecddae235b47a
+i
+9src/main/java/nl/emilvdijk/SchoolDirectory/Students2.java,a\f\af116baf1ac360ff5728409f8fe60226ed3245f6

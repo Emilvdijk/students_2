@@ -1,4 +1,4 @@
-package nl.emilvdijk;
+package nl.emilvdijk.SchoolDirectory;
 
 import java.util.ArrayList;
 import java.util.Objects;
