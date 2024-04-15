@@ -8,8 +8,6 @@ import java.util.regex.Pattern;
 
 class Students2 {
 
-  private Students2() {
-  }
 
   /**
    * school database system where mentors, students and classes can be added and removed and mentors
