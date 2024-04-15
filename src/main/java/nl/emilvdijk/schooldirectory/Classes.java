@@ -1,4 +1,4 @@
-package nl.emilvdijk.SchoolDirectory;
+package nl.emilvdijk.schooldirectory;
 
 import java.util.ArrayList;
 
@@ -69,8 +69,8 @@ class Classes {
     }
     System.out.println();
     System.out.print("studenten: ");
-    for (int i = 0; i < classStudents.size(); i++) {
-      System.out.printf("  " + classStudents.get(i).name);
+    for (Student classStudent : classStudents) {
+      System.out.printf("  " + classStudent.name);
     }
     System.out.println("\n");
   }

@@ -1,4 +1,4 @@
-package nl.emilvdijk.SchoolDirectory;
+package nl.emilvdijk.schooldirectory;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -6,6 +6,10 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 class StudentManager {
+
+  private StudentManager(){
+
+  }
 
   /**
    * 3 option switch case controlled with input

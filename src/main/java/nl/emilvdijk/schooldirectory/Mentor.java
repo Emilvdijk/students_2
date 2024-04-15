@@ -1,11 +1,11 @@
-package nl.emilvdijk.SchoolDirectory;
+package nl.emilvdijk.schooldirectory;
 
 
 class Mentor {
 
   String name;
   int age;
-  String telephoneNumber;
+  private String telephoneNumber;
   String email;
   String adress;
   String place;
@@ -33,6 +33,8 @@ class Mentor {
     this.place = place;
     this.employeeNumber = employeeNumber;
   }
+
+
 
   /**
    * used to print out mentor details

@@ -1,4 +1,4 @@
-package nl.emilvdijk.SchoolDirectory;
+package nl.emilvdijk.schooldirectory;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -6,6 +6,10 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class MentorManager {
+
+  private MentorManager(){
+
+  }
 
 
   /**
@@ -50,7 +54,7 @@ public class MentorManager {
           3 om alle mentoren te tonen.
           q om terug te gaan naar het menu.""");
       ch = myScanner.nextLine();
-    } while ((ch == "1") || (ch == "2") || (ch == "3") && (ch != "q"));
+    } while (ch.equals("1\n") || ch.equals("2\n") || ch.equals("3\n") && !(ch.equals("q\n")));
     return ch;
   }
 

@@ -1,4 +1,4 @@
-package nl.emilvdijk.SchoolDirectory;
+package nl.emilvdijk.schooldirectory;
 
 
 import java.util.ArrayList;
@@ -8,14 +8,15 @@ import java.util.regex.Pattern;
 
 class Students2 {
 
+  private Students2() {
+  }
+
   /**
    * school database system where mentors, students and classes can be added and removed and mentors
    * and students can be added and removed from classes
    *
-   * @param args not used
    */
-  static void main(String[] args) {
-    String ch;
+  static void main() {
     Scanner myScanner = new Scanner(System.in);
     Pattern emailPattern = Pattern.compile("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}");
 
@@ -39,7 +40,15 @@ class Students2 {
     System.out.println("er zijn voorbeelden toevevoegd.");
     // end of example adding code
 
+
     // main menu of the system where inputs are asked
+    mainMenu(myScanner, emailPattern, studentsList, mentorsList, classesList);
+  }
+
+  private static void mainMenu(Scanner myScanner, Pattern emailPattern,
+      ArrayList<Student> studentsList, ArrayList<Mentor> mentorsList,
+      ArrayList<Classes> classesList) {
+    String ch;
     do {
       ch = showMainMenuOptions(myScanner);
 
