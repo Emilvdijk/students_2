@@ -14,7 +14,7 @@ class Students2 {
    * and students can be added and removed from classes
    *
    */
-  static void main(String[] args) {
+  public static void main(String[] args) {
     Scanner myScanner = new Scanner(System.in);
     Pattern emailPattern = Pattern.compile("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}");
 
