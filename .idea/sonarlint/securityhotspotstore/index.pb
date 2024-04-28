@@ -35,3 +35,9 @@ m
 =src/main/java/nl/emilvdijk/schooldirectory/MentorManager.java,6\6\6600341dae91cef315fd9d9d60952ca5c2201f7d
 W
 'src/test/java/nl/emilvdijk/AppTest.java,3\7\37f103f94729c6363f09b8f728d3ba665557a9a3
+f
+6src/main/java/nl/emilvdijk/schooldirectory/Person.java,9\5\9578b2597e9ecdf33b7784da6849564480ecca61
+g
+7src/main/java/nl/emilvdijk/schooldirectory/Teacher.java,6\6\66758926baa1517107d9718b820866108309c08d
+f
+6src/main/java/nl/emilvdijk/schooldirectory/Opdracht.md,3\8\38c8dbfab594daedb4b427016b6e0dae88d48117

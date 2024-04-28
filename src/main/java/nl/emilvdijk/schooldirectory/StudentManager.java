@@ -123,7 +123,7 @@ class StudentManager {
     int y = 1;
     System.out.println("welke student wil je verwijderen:");
     for (; y - 1 < studentsList.size(); y++) {
-      System.out.printf("%s  %s%n", y, studentsList.get(y - 1).name);
+      System.out.printf("%s  %s%n", y, studentsList.get(y - 1).getName());
     }
     int choice;
     do {
@@ -143,7 +143,7 @@ class StudentManager {
       return;
     }
     for (Student student : studentsList) {
-      student.studentPrinter();
+      System.out.print(student.getStudentDetails());
     }
     System.out.println();
   }

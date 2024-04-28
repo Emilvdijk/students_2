@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 class Classes {
 
-  String className;
-  ArrayList<Mentor> classMentors;
-  ArrayList<Student> classStudents;
+  private String className;
+  private ArrayList<Mentor> classMentors;
+  private ArrayList<Student> classStudents;
 
   /**
    * constructor for classes
@@ -20,6 +20,18 @@ class Classes {
     this.className = className;
     this.classMentors = classMentors;
     this.classStudents = classStudents;
+  }
+
+  public String getClassName() {
+    return className;
+  }
+
+  public ArrayList<Mentor> getClassMentors() {
+    return classMentors;
+  }
+
+  public ArrayList<Student> getClassStudents() {
+    return classStudents;
   }
 
   /**
@@ -65,12 +77,12 @@ class Classes {
     System.out.printf("klasnaam: %-10s Mentoren: ", className);
 
     for (Mentor classMentor : classMentors) {
-      System.out.printf("%-14s", classMentor.name);
+      System.out.printf("%-14s", classMentor.getName());
     }
     System.out.println();
     System.out.print("studenten: ");
     for (Student classStudent : classStudents) {
-      System.out.printf("  " + classStudent.name);
+      System.out.printf("  " + classStudent.getName());
     }
     System.out.println("\n");
   }

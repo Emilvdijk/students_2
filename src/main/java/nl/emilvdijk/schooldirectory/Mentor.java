@@ -1,16 +1,7 @@
 package nl.emilvdijk.schooldirectory;
 
 
-class Mentor {
-
-  String name;
-  int age;
-  private String telephoneNumber;
-  String email;
-  String adress;
-  String place;
-  int employeeNumber;
-
+class Mentor extends Teacher{
 
   /**
    * constructor for mentor class
@@ -23,26 +14,18 @@ class Mentor {
    * @param place place of recidence of mentor
    * @param employeeNumber employee number of mentor
    */
-  Mentor(String name, int age, String telephoneNumber, String email, String adress, String place,
-      int employeeNumber) {
-    this.name = name;
-    this.age = age;
-    this.telephoneNumber = telephoneNumber;
-    this.email = email;
-    this.adress = adress;
-    this.place = place;
-    this.employeeNumber = employeeNumber;
+  public Mentor(String name, int age, String telephoneNumber, String email, String adress,
+      String place, int employeeNumber) {
+    super(name, age, telephoneNumber, email, adress, place, employeeNumber);
   }
 
 
-
   /**
-   * used to print out mentor details
+   * returns mentor details
+   * @return mentor details
    */
-  void mentorPrinter() {
-    System.out.printf(
-        "naam: %-14s  leeftijd: %-5s  telefoonnummer: %-18s e-mail: %-23s adres: %-16s woonplaats: %-16s werknemernummer: %-8s %n",
-        name, age, telephoneNumber, email, adress, place, employeeNumber);
+  String getMentorDetails(){
+    return "naam: %-14s  leeftijd: %-5s  telefoonnummer: %-18s e-mail: %-23s adres: %-16s woonplaats: %-16s werknemernummer: %-8s %n".formatted(this.getName(),this.getAge(),this.getTelephoneNumber(),this.getEmail(),this.getAdress(),this.getPlace(),this.getEmployeeNumber());
   }
 
 }

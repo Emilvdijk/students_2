@@ -131,7 +131,7 @@ public class MentorManager {
     int y = 1;
     System.out.println("welke mentor wil je verwijderen:");
     for (; y - 1 < mentorsList.size(); y++) {
-      System.out.printf("%s  %s%n", y, mentorsList.get(y - 1).name);
+      System.out.printf("%s  %s%n", y, mentorsList.get(y - 1).getName());
     }
     int choice;
     do {
@@ -151,7 +151,7 @@ public class MentorManager {
       return;
     }
     for (Mentor mentor : mentorsList) {
-      mentor.mentorPrinter();
+      System.out.print(mentor.getMentorDetails());
     }
     System.out.println();
   }
