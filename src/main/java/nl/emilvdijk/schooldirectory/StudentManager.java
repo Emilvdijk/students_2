@@ -1,15 +1,20 @@
 package nl.emilvdijk.schooldirectory;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 class StudentManager {
 
+  /**
+   * private constructor to prevent instantiation
+   */
   private StudentManager(){
-
   }
+  private static final String STANDARD_MESSAGE = "doe eens beter je best.";
+
 
   /**
    * 3 option switch case controlled with input
@@ -19,7 +24,7 @@ class StudentManager {
    * @param studentsList list to manage
    */
   static void manageStudents(Scanner myScanner, Pattern emailPattern,
-      ArrayList<Student> studentsList) {
+      ArrayList<Person> studentsList) {
     String ch;
     do {
       do {
@@ -58,7 +63,7 @@ class StudentManager {
    * @param studentsList list to add student
    */
   private static void addNewStudent(Scanner myScanner, Pattern emailPattern,
-      ArrayList<Student> studentsList) {
+      ArrayList<Person> studentsList) {
     System.out.println(
         "Vul de naam van de nieuwe student in of \"q\" om te annuleren: \n");
     String studentName = myScanner.nextLine();
@@ -115,7 +120,7 @@ class StudentManager {
    * @param myScanner reuse from main
    * @param studentsList list to delete student from
    */
-  private static void deleteStudent(Scanner myScanner, ArrayList<Student> studentsList) {
+  private static void deleteStudent(Scanner myScanner, ArrayList<Person> studentsList) {
     if (studentsList.isEmpty()) {
       System.out.println("de studentenlijst is leeg");
       return;
@@ -137,14 +142,40 @@ class StudentManager {
    * prints out student info with printer method from Student class
    * @param studentsList list to print
    */
-  private static void printStudents(ArrayList<Student> studentsList) {
+  private static void printStudents(ArrayList<Person> studentsList) {
     if (studentsList.isEmpty()) {
       System.out.println("de studentenlijst is leeg");
       return;
     }
-    for (Student student : studentsList) {
-      System.out.print(student.getStudentDetails());
+    for (Person student : studentsList) {
+      System.out.print(student.toString());
     }
     System.out.println();
   }
+
+  /**
+   * sends an email with specified message to students who are failing a specified subject
+   * @param studentsList    list of students to go through
+   * @param subject         subject to check
+   * @param message         message to send the students
+   */
+  static void mailFailingStudents(ArrayList<Person> studentsList, Subject subject, String message){
+    for (Person person : studentsList) {
+      Student student = (Student) person;
+      HashMap<Subject,Integer> mapCopy = student.getSubjects();
+      if (mapCopy.get(subject)<6){
+        Mailer.sendMail(person,message);
+      }
+    }
+  }
+
+  /**
+   * overloaded method sending a standard message
+   * @param studentsList  list of students to go through
+   * @param subject       subject to check
+   */
+  static void mailFailingStudents(ArrayList<Person> studentsList, Subject subject){
+    mailFailingStudents(studentsList,subject, STANDARD_MESSAGE);
+  }
+
 }

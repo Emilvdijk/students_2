@@ -5,8 +5,8 @@ import java.util.ArrayList;
 class Classes {
 
   private String className;
-  private ArrayList<Mentor> classMentors;
-  private ArrayList<Student> classStudents;
+  private ArrayList<Person> classMentors;
+  private ArrayList<Person> classStudents;
 
   /**
    * constructor for classes
@@ -15,8 +15,8 @@ class Classes {
    * @param classMentors  arraylist<Mentor>  list of mentor class objects
    * @param classStudents arraylist<Student> list of student class objects
    */
-  Classes(String className, ArrayList<Mentor> classMentors,
-      ArrayList<Student> classStudents) {
+  Classes(String className, ArrayList<Person> classMentors,
+      ArrayList<Person> classStudents) {
     this.className = className;
     this.classMentors = classMentors;
     this.classStudents = classStudents;
@@ -26,11 +26,11 @@ class Classes {
     return className;
   }
 
-  public ArrayList<Mentor> getClassMentors() {
+  public ArrayList<Person> getClassMentors() {
     return classMentors;
   }
 
-  public ArrayList<Student> getClassStudents() {
+  public ArrayList<Person> getClassStudents() {
     return classStudents;
   }
 
@@ -39,7 +39,7 @@ class Classes {
    *
    * @param classMentor Mentor class object to add
    */
-  void addClassMentor(Mentor classMentor) {
+  void addClassMentor(Person classMentor) {
     this.classMentors.add(classMentor);
   }
 
@@ -48,7 +48,7 @@ class Classes {
    *
    * @param classStudent student class object to add
    */
-  void addClassStudent(Student classStudent) {
+  void addClassStudent(Person classStudent) {
     this.classStudents.add(classStudent);
   }
 
@@ -57,7 +57,7 @@ class Classes {
    *
    * @param classMentor mentor class object to remove from list
    */
-  void removeClassMentor(Mentor classMentor) {
+  void removeClassMentor(Person classMentor) {
     this.classMentors.remove(classMentor);
   }
 
@@ -66,7 +66,7 @@ class Classes {
    *
    * @param classStudent student class object to remove from list
    */
-  void removeClassStudent(Student classStudent) {
+  void removeClassStudent(Person classStudent) {
     this.classStudents.remove(classStudent);
   }
 
@@ -76,12 +76,12 @@ class Classes {
   void classesPrinter() {
     System.out.printf("klasnaam: %-10s Mentoren: ", className);
 
-    for (Mentor classMentor : classMentors) {
+    for (Person classMentor : classMentors) {
       System.out.printf("%-14s", classMentor.getName());
     }
     System.out.println();
     System.out.print("studenten: ");
-    for (Student classStudent : classStudents) {
+    for (Person classStudent : classStudents) {
       System.out.printf("  " + classStudent.getName());
     }
     System.out.println("\n");

@@ -4,6 +4,7 @@ package nl.emilvdijk.schooldirectory;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Pattern;
+import net.datafaker.Faker;
 
 
 class Students2 {
@@ -17,19 +18,20 @@ class Students2 {
   public static void main(String[] args) {
     Scanner myScanner = new Scanner(System.in);
     Pattern emailPattern = Pattern.compile("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}");
+    Faker faker = new Faker();
 
     // 3 examples added for students mentors and classes and notify they have been added
-    ArrayList<Student> javaStudentList = new ArrayList<>();
-    ArrayList<Student> htmlStudentList = new ArrayList<>();
-    ArrayList<Student> pythonStudentList = new ArrayList<>();
-    ArrayList<Student> studentsList = new ArrayList<>();
-    createStudents(studentsList, javaStudentList, pythonStudentList, htmlStudentList);
+    ArrayList<Person> javaStudentList = new ArrayList<>();
+    ArrayList<Person> htmlStudentList = new ArrayList<>();
+    ArrayList<Person> pythonStudentList = new ArrayList<>();
+    ArrayList<Person> studentsList = new ArrayList<>();
+    createStudents(studentsList, javaStudentList, pythonStudentList, htmlStudentList,5,faker);
 
-    ArrayList<Mentor> pythonMentorList = new ArrayList<>();
-    ArrayList<Mentor> javaMentorList = new ArrayList<>();
-    ArrayList<Mentor> htmlMentorList = new ArrayList<>();
-    ArrayList<Mentor> mentorsList = new ArrayList<>();
-    createMentors(mentorsList, javaMentorList, htmlMentorList, pythonMentorList);
+    ArrayList<Person> pythonMentorList = new ArrayList<>();
+    ArrayList<Person> javaMentorList = new ArrayList<>();
+    ArrayList<Person> htmlMentorList = new ArrayList<>();
+    ArrayList<Person> mentorsList = new ArrayList<>();
+    createMentors(mentorsList, javaMentorList, htmlMentorList, pythonMentorList,5,faker);
 
     ArrayList<Classes> classesList = new ArrayList<>();
     createClasses(javaMentorList, javaStudentList, pythonMentorList, pythonStudentList,
@@ -38,13 +40,12 @@ class Students2 {
     System.out.println("er zijn voorbeelden toevevoegd.");
     // end of example adding code
 
-
     // main menu of the system where inputs are asked
     mainMenu(myScanner, emailPattern, studentsList, mentorsList, classesList);
   }
 
   private static void mainMenu(Scanner myScanner, Pattern emailPattern,
-      ArrayList<Student> studentsList, ArrayList<Mentor> mentorsList,
+      ArrayList<Person> studentsList, ArrayList<Person> mentorsList,
       ArrayList<Classes> classesList) {
     String ch;
     do {
@@ -94,10 +95,10 @@ class Students2 {
    * @param htmlStudentList list of students for html class
    * @param classesList list of classes to add examples to
    */
-  private static void createClasses(ArrayList<Mentor> javaMentorList,
-      ArrayList<Student> javaStudentList, ArrayList<Mentor> pythonMentorList,
-      ArrayList<Student> pythonStudentList, ArrayList<Mentor> htmlMentorList,
-      ArrayList<Student> htmlStudentList, ArrayList<Classes> classesList) {
+  private static void createClasses(ArrayList<Person> javaMentorList,
+      ArrayList<Person> javaStudentList, ArrayList<Person> pythonMentorList,
+      ArrayList<Person> pythonStudentList, ArrayList<Person> htmlMentorList,
+      ArrayList<Person> htmlStudentList, ArrayList<Classes> classesList) {
     Classes java = new Classes("Java", javaMentorList, javaStudentList);
     Classes python = new Classes("Python", pythonMentorList, pythonStudentList);
     Classes html = new Classes("HTML", htmlMentorList, htmlStudentList);
@@ -109,13 +110,16 @@ class Students2 {
 
   /**
    * adds example mentors and adds some to example classes
-   * @param mentorsList list of mentors for examples to be added to
-   * @param javaMentorList java example class list to add to
-   * @param htmlMentorList html example class list to add to
+   *
+   * @param mentorsList      list of mentors for examples to be added to
+   * @param javaMentorList   java example class list to add to
+   * @param htmlMentorList   html example class list to add to
    * @param pythonMentorList python example class list to add to
+   * @param numberOfMentors  number of example mentor to add on top of 3 base ones
+   * @param faker            reuse faker
    */
-  private static void createMentors(ArrayList<Mentor> mentorsList, ArrayList<Mentor> javaMentorList,
-      ArrayList<Mentor> htmlMentorList, ArrayList<Mentor> pythonMentorList) {
+  private static void createMentors(ArrayList<Person> mentorsList, ArrayList<Person> javaMentorList,
+      ArrayList<Person> htmlMentorList, ArrayList<Person> pythonMentorList, int numberOfMentors,Faker faker) {
     Mentor daan = new Mentor("Daan", 55, "2345234532", "nice@school.com", "Schoolstraat",
         "Schoolstad", 55);
     Mentor david = new Mentor("David", 57, "56785867", "nice2@school2.com", "Schoolweg",
@@ -125,6 +129,18 @@ class Students2 {
     mentorsList.add(daan);
     mentorsList.add(david);
     mentorsList.add(simone);
+    for (int i = 0; i < numberOfMentors; i++) {
+      Mentor exampleTeacher = new Mentor(
+          faker.animal().name(),
+          faker.number().numberBetween(0, 69),
+          faker.phoneNumber().cellPhone(),
+          faker.internet().emailAddress(),
+          faker.address().streetAddress(),
+          faker.address().city(),
+          faker.number().numberBetween(0, 9999));
+      mentorsList.add(exampleTeacher);
+    }
+
     javaMentorList.add(daan);
     htmlMentorList.add(simone);
     pythonMentorList.add(david);
@@ -132,14 +148,16 @@ class Students2 {
 
   /**
    * adds example students and adds some to example classes
-   * @param studentsList list of students for examples to be added to
-   * @param javaStudentList java example class list to add to
+   * @param studentsList      list of students for examples to be added to
+   * @param javaStudentList   java example class list to add to
    * @param pythonStudentList html example class list to add to
-   * @param htmlStudentList python example class list to add to
+   * @param htmlStudentList   python example class list to add to
+   * @param numberOfStudents  number of example students to add on top of 3 base ones
+   * @param faker             reuse faker
    */
-  private static void createStudents(ArrayList<Student> studentsList,
-      ArrayList<Student> javaStudentList,
-      ArrayList<Student> pythonStudentList, ArrayList<Student> htmlStudentList) {
+  private static void createStudents(ArrayList<Person> studentsList,
+      ArrayList<Person> javaStudentList,
+      ArrayList<Person> pythonStudentList, ArrayList<Person> htmlStudentList, int numberOfStudents, Faker faker) {
     Student eric = new Student("Eric", 12, "346575764", "nice@nice.com", "Nicestraat 1", "Nicestad",
         34);
     Student jantje = new Student("Jantje", 5, "23452345", "nice3@nice3.com", "Nicewijk 2",
@@ -149,6 +167,17 @@ class Students2 {
     studentsList.add(eric);
     studentsList.add(jantje);
     studentsList.add(evelien);
+    for (int i = 0; i < numberOfStudents; i++) {
+      Student exampleStudent = new Student(
+          faker.pokemon().name(),
+          faker.number().numberBetween(0,69),
+          faker.phoneNumber().cellPhone(),
+          faker.internet().emailAddress(),
+          faker.address().streetAddress(false),
+          faker.address().city(),
+          faker.number().numberBetween(0,9999));
+      studentsList.add(exampleStudent);
+    }
     javaStudentList.add(jantje);
     javaStudentList.add(evelien);
     pythonStudentList.add(eric);
@@ -157,6 +186,3 @@ class Students2 {
     htmlStudentList.add(jantje);
   }
 }
-
-
-

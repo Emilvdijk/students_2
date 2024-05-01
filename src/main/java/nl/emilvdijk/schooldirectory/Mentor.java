@@ -19,14 +19,20 @@ class Mentor extends Teacher{
     super(name, age, telephoneNumber, email, adress, place, employeeNumber);
   }
 
-
   /**
-   * returns mentor details
-   * @return mentor details
+   * returns formated string of mentor details
+   * @return formated string of mentor details
    */
-  String getMentorDetails(){
-    return "naam: %-14s  leeftijd: %-5s  telefoonnummer: %-18s e-mail: %-23s adres: %-16s woonplaats: %-16s werknemernummer: %-8s %n".formatted(this.getName(),this.getAge(),this.getTelephoneNumber(),this.getEmail(),this.getAdress(),this.getPlace(),this.getEmployeeNumber());
+  @Override
+  public String toString() {
+    return "naam: %-14s  leeftijd: %-5s  telefoonnr: %-18s e-mail: %-26s adres: %-22s woonplaats: %-18s werknemernummer: %-8s %n".formatted(
+        this.getName(),
+        this.getAge(),
+        this.getTelephoneNumber(),
+        this.getEmail(),
+        this.getAddress(),
+        this.getPlace(),
+        this.getEmployeeNumber());
   }
-
 }
 

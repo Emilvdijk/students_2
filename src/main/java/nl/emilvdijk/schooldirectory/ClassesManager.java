@@ -10,7 +10,7 @@ class ClassesManager {
   }
 
   static void manageClasses(Scanner myScanner, ArrayList<Classes> classesList,
-      ArrayList<Mentor> mentorsList, ArrayList<Student> studentsList) {
+      ArrayList<Person> mentorsList, ArrayList<Person> studentsList) {
     String ch;
     do {
       ch = showMenuOptions(myScanner);
@@ -78,15 +78,15 @@ class ClassesManager {
   private static void addNewClass(Scanner myScanner, ArrayList<Classes> classesList) {
     System.out.println("naam van de klas:");
     String newClassName = myScanner.nextLine();
-    ArrayList<Mentor> newMentorList = new ArrayList<>();
-    ArrayList<Student> newStudentList = new ArrayList<>();
+    ArrayList<Person> newMentorList = new ArrayList<>();
+    ArrayList<Person> newStudentList = new ArrayList<>();
     Classes newClass = new Classes(newClassName, newMentorList, newStudentList);
     classesList.add(newClass);
   }
 
 
   private static void addMentorToClass(Scanner myScanner, ArrayList<Classes> classesList,
-      ArrayList<Mentor> mentorsList) {
+      ArrayList<Person> mentorsList) {
     if (classesList.isEmpty()) {
       System.out.println("de klassenlijst is leeg");
       return;
@@ -123,7 +123,7 @@ class ClassesManager {
 
 
   private static void addStudentToClass(Scanner myScanner, ArrayList<Classes> classesList,
-      ArrayList<Student> studentsList) {
+      ArrayList<Person> studentsList) {
     if (classesList.isEmpty()) {
       System.out.println("de klassenlijst is leeg");
       return;

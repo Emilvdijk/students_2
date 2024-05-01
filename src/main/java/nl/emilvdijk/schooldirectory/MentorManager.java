@@ -20,7 +20,7 @@ public class MentorManager {
    * @param mentorsList list to manage
    */
   static void manageMentors(Scanner myScanner, Pattern emailPattern,
-      ArrayList<Mentor> mentorsList) {
+      ArrayList<Person> mentorsList) {
     String ch;
     do {
       ch = manageMentorMenu(myScanner);
@@ -66,7 +66,7 @@ public class MentorManager {
    * @param mentorsList list to add mentor to
    */
   private static void addNewMentor(Scanner myScanner, Pattern emailPattern,
-      ArrayList<Mentor> mentorsList) {
+      ArrayList<Person> mentorsList) {
     System.out.println(
         "Vul de naam van de nieuwe mentor in of \"q\" om te annuleren: \n");
     String mentorName = myScanner.nextLine();
@@ -123,7 +123,7 @@ public class MentorManager {
    * @param myScanner   reuse from main
    * @param mentorsList list to delete mentor from
    */
-  private static void deleteMentor(Scanner myScanner, ArrayList<Mentor> mentorsList) {
+  private static void deleteMentor(Scanner myScanner, ArrayList<Person> mentorsList) {
     if (mentorsList.isEmpty()) {
       System.out.println("de mentorenlijst is leeg");
       return;
@@ -145,13 +145,13 @@ public class MentorManager {
    * uses methed from Mentor class to print out mentor info
    * @param mentorsList list to print out
    */
-  private static void printMentors(ArrayList<Mentor> mentorsList) {
+  private static void printMentors(ArrayList<Person> mentorsList) {
     if (mentorsList.isEmpty()) {
       System.out.println("de mentorenlijst is leeg");
       return;
     }
-    for (Mentor mentor : mentorsList) {
-      System.out.print(mentor.getMentorDetails());
+    for (Person mentor : mentorsList) {
+      System.out.print(mentor.toString());
     }
     System.out.println();
   }
