@@ -3,10 +3,12 @@ package nl.emilvdijk.schooldirectory;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.HashMap;
+import java.util.Map;
+
 public class Teacher extends Person{
 
   private int employeeNumber;
-  private HashMap<Month, Boolean> hoursDeclared;
+  private Map<Month, Boolean> hoursDeclared;
 
   /**
    * constructor for teacher objects
@@ -24,6 +26,15 @@ public class Teacher extends Person{
     super(name, age, telephoneNumber, email, address, place);
     this.employeeNumber=employeeNumber;
     this.hoursDeclared= new HashMap<>();
+    hoursDeclared.put(LocalDate.now().getMonth(), Boolean.FALSE);
+  }
+
+  public Teacher(String name, int age, String telephoneNumber, String email, String address,
+      String place,int employeeNumber, Map hoursDeclared,boolean currentMonthDeclaration) {
+    super(name, age, telephoneNumber, email, address, place);
+    this.employeeNumber=employeeNumber;
+    hoursDeclared.put(LocalDate.now().getMonth(),currentMonthDeclaration);
+    this.hoursDeclared= hoursDeclared;
   }
 
   /**
@@ -38,7 +49,7 @@ public class Teacher extends Person{
    * returns hasmhap of declared hours
    * @return hasmhap of declared hours
    */
-  public HashMap<Month, Boolean> getHoursDeclared(){
+  public Map<Month, Boolean> getHoursDeclared(){
     return hoursDeclared;
   }
 

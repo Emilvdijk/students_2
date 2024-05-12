@@ -2,6 +2,7 @@ package nl.emilvdijk.schooldirectory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -24,7 +25,7 @@ class StudentManager {
    * @param studentsList list to manage
    */
   static void manageStudents(Scanner myScanner, Pattern emailPattern,
-      ArrayList<Person> studentsList) {
+      List<Student> studentsList) {
     String ch;
     do {
       do {
@@ -63,7 +64,7 @@ class StudentManager {
    * @param studentsList list to add student
    */
   private static void addNewStudent(Scanner myScanner, Pattern emailPattern,
-      ArrayList<Person> studentsList) {
+      List<Student> studentsList) {
     System.out.println(
         "Vul de naam van de nieuwe student in of \"q\" om te annuleren: \n");
     String studentName = myScanner.nextLine();
@@ -120,7 +121,7 @@ class StudentManager {
    * @param myScanner reuse from main
    * @param studentsList list to delete student from
    */
-  private static void deleteStudent(Scanner myScanner, ArrayList<Person> studentsList) {
+  private static void deleteStudent(Scanner myScanner, List<Student> studentsList) {
     if (studentsList.isEmpty()) {
       System.out.println("de studentenlijst is leeg");
       return;
@@ -142,7 +143,7 @@ class StudentManager {
    * prints out student info with printer method from Student class
    * @param studentsList list to print
    */
-  private static void printStudents(ArrayList<Person> studentsList) {
+  private static void printStudents(List<Student> studentsList) {
     if (studentsList.isEmpty()) {
       System.out.println("de studentenlijst is leeg");
       return;

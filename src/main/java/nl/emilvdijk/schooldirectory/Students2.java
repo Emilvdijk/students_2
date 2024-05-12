@@ -2,6 +2,7 @@ package nl.emilvdijk.schooldirectory;
 
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import net.datafaker.Faker;
@@ -24,14 +25,16 @@ class Students2 {
     ArrayList<Person> javaStudentList = new ArrayList<>();
     ArrayList<Person> htmlStudentList = new ArrayList<>();
     ArrayList<Person> pythonStudentList = new ArrayList<>();
-    ArrayList<Person> studentsList = new ArrayList<>();
+    ArrayList<Student> studentsList = new ArrayList<>();
     createStudents(studentsList, javaStudentList, pythonStudentList, htmlStudentList,5,faker);
 
     ArrayList<Person> pythonMentorList = new ArrayList<>();
     ArrayList<Person> javaMentorList = new ArrayList<>();
     ArrayList<Person> htmlMentorList = new ArrayList<>();
-    ArrayList<Person> mentorsList = new ArrayList<>();
-    createMentors(mentorsList, javaMentorList, htmlMentorList, pythonMentorList,5,faker);
+//    ArrayList<Person> mentorsList = new ArrayList<>();
+    //FIXME @JsonProperty constructor toevoegen?
+    List<Mentor> mentorsList = JsonManager.LoadFiles("mentorsList",Mentor.class);
+//    createMentors(mentorsList, javaMentorList, htmlMentorList, pythonMentorList,5,faker);
 
     ArrayList<Classes> classesList = new ArrayList<>();
     createClasses(javaMentorList, javaStudentList, pythonMentorList, pythonStudentList,
@@ -42,10 +45,13 @@ class Students2 {
 
     // main menu of the system where inputs are asked
     mainMenu(myScanner, emailPattern, studentsList, mentorsList, classesList);
+
+    // save mentorlist to JSON
+    JsonManager.SaveFiles("mentorsList",mentorsList);
   }
 
   private static void mainMenu(Scanner myScanner, Pattern emailPattern,
-      ArrayList<Person> studentsList, ArrayList<Person> mentorsList,
+      List<Student> studentsList, List<Mentor> mentorsList,
       ArrayList<Classes> classesList) {
     String ch;
     do {
@@ -155,7 +161,7 @@ class Students2 {
    * @param numberOfStudents  number of example students to add on top of 3 base ones
    * @param faker             reuse faker
    */
-  private static void createStudents(ArrayList<Person> studentsList,
+  private static void createStudents(ArrayList<Student> studentsList,
       ArrayList<Person> javaStudentList,
       ArrayList<Person> pythonStudentList, ArrayList<Person> htmlStudentList, int numberOfStudents, Faker faker) {
     Student eric = new Student("Eric", 12, "346575764", "nice@nice.com", "Nicestraat 1", "Nicestad",

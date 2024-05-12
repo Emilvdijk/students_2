@@ -59,3 +59,5 @@ r
 Bsrc/test/java/nl/emilvdijk/schooldirectory/TeacherManagerTest.java,0\7\0768380d995a712a0aeddd77d8a3d1e39dbccd1c
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
+k
+;src/main/java/nl/emilvdijk/schooldirectory/JsonManager.java,1\e\1ead074520184c68a730f84d022a9d34eb4baf6b

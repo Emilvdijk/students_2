@@ -1,6 +1,7 @@
 package nl.emilvdijk.schooldirectory;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 class ClassesManager {
@@ -10,7 +11,7 @@ class ClassesManager {
   }
 
   static void manageClasses(Scanner myScanner, ArrayList<Classes> classesList,
-      ArrayList<Person> mentorsList, ArrayList<Person> studentsList) {
+      List<Mentor> mentorsList, List<Student> studentsList) {
     String ch;
     do {
       ch = showMenuOptions(myScanner);
@@ -86,7 +87,7 @@ class ClassesManager {
 
 
   private static void addMentorToClass(Scanner myScanner, ArrayList<Classes> classesList,
-      ArrayList<Person> mentorsList) {
+      List<Mentor> mentorsList) {
     if (classesList.isEmpty()) {
       System.out.println("de klassenlijst is leeg");
       return;
@@ -94,7 +95,7 @@ class ClassesManager {
 
     System.out.println("aan welke klas wil je een mentor toevoegen:");
     for (int y = 1; y - 1 < classesList.size(); y++) {
-      System.out.printf("%s  %s%n", y, classesList.get(y - 1).getClass());
+      System.out.printf("%s  %s%n", y, classesList.get(y - 1).getClassName());
     }
     int chosenClass;
     do {
@@ -123,7 +124,7 @@ class ClassesManager {
 
 
   private static void addStudentToClass(Scanner myScanner, ArrayList<Classes> classesList,
-      ArrayList<Person> studentsList) {
+      List<Student> studentsList) {
     if (classesList.isEmpty()) {
       System.out.println("de klassenlijst is leeg");
       return;

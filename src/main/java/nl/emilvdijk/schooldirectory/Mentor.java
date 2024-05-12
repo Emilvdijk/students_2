@@ -1,6 +1,9 @@
 package nl.emilvdijk.schooldirectory;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 class Mentor extends Teacher{
 
   /**
@@ -18,6 +21,14 @@ class Mentor extends Teacher{
       String place, int employeeNumber) {
     super(name, age, telephoneNumber, email, adress, place, employeeNumber);
   }
+
+
+  public Mentor( String name, int age, String telephoneNumber, String email, String address,
+      String place,int employeeNumber, Map hoursDeclared,boolean currentMonthDeclaration) {
+    super(name, age, telephoneNumber, email, address, place, employeeNumber,hoursDeclared,currentMonthDeclaration);
+  }
+
+
 
   /**
    * returns formated string of mentor details

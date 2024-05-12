@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Month;
 import java.util.HashMap;
+import java.util.Map;
 import net.datafaker.Faker;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +25,7 @@ class TeacherTest {
   @Test
   void getHoursDeclared() {
     leraar.setHoursDeclared(Month.of(1),true);
-    HashMap<Month,Boolean> newMap = leraar.getHoursDeclared();
+    Map<Month,Boolean> newMap = leraar.getHoursDeclared();
     assertEquals(true,newMap.get(Month.of(1)));
     assertNull(newMap.get(Month.of(2)));
 
