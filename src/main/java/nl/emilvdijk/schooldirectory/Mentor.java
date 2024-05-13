@@ -1,7 +1,8 @@
 package nl.emilvdijk.schooldirectory;
 
 
-import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Map;
 
 class Mentor extends Teacher{
@@ -22,10 +23,36 @@ class Mentor extends Teacher{
     super(name, age, telephoneNumber, email, adress, place, employeeNumber);
   }
 
-
-  public Mentor( String name, int age, String telephoneNumber, String email, String address,
-      String place,int employeeNumber, Map hoursDeclared,boolean currentMonthDeclaration) {
-    super(name, age, telephoneNumber, email, address, place, employeeNumber,hoursDeclared,currentMonthDeclaration);
+  /**
+   * JsonCreator constructor for loading Mentor objects from JSON file
+   * @param name
+   * @param age
+   * @param telephoneNumber
+   * @param email
+   * @param address
+   * @param place
+   * @param employeeNumber
+   * @param hoursDeclared
+   */
+  @JsonCreator
+  public Mentor(
+      @JsonProperty("name") String name,
+      @JsonProperty("age") int age,
+      @JsonProperty("telephoneNumber") String telephoneNumber,
+      @JsonProperty("email") String email,
+      @JsonProperty("address") String address,
+      @JsonProperty("place") String place,
+      @JsonProperty("employeeNumber") int employeeNumber,
+      @JsonProperty("hoursDeclared") Map hoursDeclared) {
+    super(
+        name,
+        age,
+        telephoneNumber,
+        email,
+        address,
+        place,
+        employeeNumber,
+        hoursDeclared);
   }
 
 
@@ -45,5 +72,7 @@ class Mentor extends Teacher{
         this.getPlace(),
         this.getEmployeeNumber());
   }
+
+
 }
 

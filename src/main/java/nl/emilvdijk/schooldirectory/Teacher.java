@@ -26,14 +26,12 @@ public class Teacher extends Person{
     super(name, age, telephoneNumber, email, address, place);
     this.employeeNumber=employeeNumber;
     this.hoursDeclared= new HashMap<>();
-    hoursDeclared.put(LocalDate.now().getMonth(), Boolean.FALSE);
   }
 
   public Teacher(String name, int age, String telephoneNumber, String email, String address,
-      String place,int employeeNumber, Map hoursDeclared,boolean currentMonthDeclaration) {
+      String place,int employeeNumber, Map hoursDeclared) {
     super(name, age, telephoneNumber, email, address, place);
     this.employeeNumber=employeeNumber;
-    hoursDeclared.put(LocalDate.now().getMonth(),currentMonthDeclaration);
     this.hoursDeclared= hoursDeclared;
   }
 
@@ -57,8 +55,14 @@ public class Teacher extends Person{
    * returns boolean of whether this month's hours are declared
    * @return boolean of whether this month's hours are declared
    */
-  public boolean getCurrentMonthDeclaration(){
-    return hoursDeclared.get(LocalDate.now().getMonth());
+  public boolean checkCurrentMonthDeclaration(){
+    if (hoursDeclared.get(LocalDate.now().getMonth())){
+      return hoursDeclared.get(LocalDate.now().getMonth());
+    }
+    else{
+      return false;
+    }
+
   }
 
   /**

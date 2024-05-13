@@ -32,7 +32,6 @@ class Students2 {
     ArrayList<Person> javaMentorList = new ArrayList<>();
     ArrayList<Person> htmlMentorList = new ArrayList<>();
 //    ArrayList<Person> mentorsList = new ArrayList<>();
-    //FIXME @JsonProperty constructor toevoegen?
     List<Mentor> mentorsList = JsonManager.LoadFiles("mentorsList",Mentor.class);
 //    createMentors(mentorsList, javaMentorList, htmlMentorList, pythonMentorList,5,faker);
 
@@ -124,7 +123,7 @@ class Students2 {
    * @param numberOfMentors  number of example mentor to add on top of 3 base ones
    * @param faker            reuse faker
    */
-  private static void createMentors(ArrayList<Person> mentorsList, ArrayList<Person> javaMentorList,
+  private static void createMentors(List<Mentor> mentorsList, ArrayList<Person> javaMentorList,
       ArrayList<Person> htmlMentorList, ArrayList<Person> pythonMentorList, int numberOfMentors,Faker faker) {
     Mentor daan = new Mentor("Daan", 55, "2345234532", "nice@school.com", "Schoolstraat",
         "Schoolstad", 55);
