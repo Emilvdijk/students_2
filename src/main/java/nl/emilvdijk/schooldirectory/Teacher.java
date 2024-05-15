@@ -45,32 +45,29 @@ public class Teacher extends Person{
 
   /**
    * returns hasmhap of declared hours
+   *
    * @return hasmhap of declared hours
    */
-  public Map<Month, Boolean> getHoursDeclared(){
+  public Map<Month, Boolean> getHoursDeclared() {
     return hoursDeclared;
   }
 
   /**
    * returns boolean of whether this month's hours are declared
+   *
    * @return boolean of whether this month's hours are declared
    */
-  public boolean checkCurrentMonthDeclaration(){
-    if (hoursDeclared.get(LocalDate.now().getMonth())){
-      return hoursDeclared.get(LocalDate.now().getMonth());
-    }
-    else{
-      return false;
-    }
-
+  public boolean checkCurrentMonthDeclaration() {
+    return hoursDeclared.get(LocalDate.now().getMonth());
   }
 
   /**
    * sets boolean of month declared to given data
-   * @param month month to set
+   *
+   * @param month      month to set
    * @param isDeclared boolean to set to
    */
-  public void setHoursDeclared(Month month,boolean isDeclared){
-    this.hoursDeclared.put(month,isDeclared);
+  public void setHoursDeclared(Month month, boolean isDeclared) {
+    this.hoursDeclared.put(month, isDeclared);
   }
 }

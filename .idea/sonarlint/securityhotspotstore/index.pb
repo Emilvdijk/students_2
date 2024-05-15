@@ -61,3 +61,12 @@ Bsrc/test/java/nl/emilvdijk/schooldirectory/TeacherManagerTest.java,0\7\0768380
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 k
 ;src/main/java/nl/emilvdijk/schooldirectory/JsonManager.java,1\e\1ead074520184c68a730f84d022a9d34eb4baf6b
+C
+JsonManager.log.lck,6\3\6315d14b8be2138a80f960c3dc5eec482bd07ea7
+?
+JsonManager.log,3\8\38075a34cddcdf2a212c3a9ec29d5bfceb464187
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+A
+JsonManager.log.1,0\a\0a4ed2db76e196aeb5aa51bd3950c42dc5b67fb4

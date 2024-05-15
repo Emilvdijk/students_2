@@ -1,6 +1,7 @@
 package nl.emilvdijk.schooldirectory;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,7 +17,7 @@ class Students2 {
    * and students can be added and removed from classes
    *
    */
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     Scanner myScanner = new Scanner(System.in);
     Pattern emailPattern = Pattern.compile("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}");
     Faker faker = new Faker();
@@ -31,9 +32,10 @@ class Students2 {
     ArrayList<Person> pythonMentorList = new ArrayList<>();
     ArrayList<Person> javaMentorList = new ArrayList<>();
     ArrayList<Person> htmlMentorList = new ArrayList<>();
-//    ArrayList<Person> mentorsList = new ArrayList<>();
     List<Mentor> mentorsList = JsonManager.LoadFiles("mentorsList",Mentor.class);
-//    createMentors(mentorsList, javaMentorList, htmlMentorList, pythonMentorList,5,faker);
+    if (mentorsList.size()<3){
+      createMentors(mentorsList, javaMentorList, htmlMentorList, pythonMentorList,5,faker);
+    }
 
     ArrayList<Classes> classesList = new ArrayList<>();
     createClasses(javaMentorList, javaStudentList, pythonMentorList, pythonStudentList,
@@ -46,7 +48,7 @@ class Students2 {
     mainMenu(myScanner, emailPattern, studentsList, mentorsList, classesList);
 
     // save mentorlist to JSON
-    JsonManager.SaveFiles("mentorsList",mentorsList);
+      JsonManager.SaveFiles("mentorsList",mentorsList);
   }
 
   private static void mainMenu(Scanner myScanner, Pattern emailPattern,
